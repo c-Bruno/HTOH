@@ -1,0 +1,7 @@
+{
+  "name": "branco",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

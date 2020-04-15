@@ -29,3 +29,51 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+ion-content {
+  --background: #F1F2F4 url('../../assets/imgs/Splash.jpg') center bottom 0px/370px no-repeat;
+}
+
+.btns{
+    margin: 2px 50px 4px -24px;
+    text-align: left;
+}
+
+.efeito{
+  background-color: #1B2531;
+  color: #F1F2F4;
+  float: left;
+  width: 220px;
+  padding: 0px;
+  font-size: 20px;
+  border-radius: 30px;
+  transition: all 400ms ease;
+}
+
+.efeito-1{
+  background-color: #1B2531;
+}
+
+.efeito-1:before{
+  content: '';
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 1s ease;
+}
+
+.efeito-1:hover::before{
+  width: 100%;
+}
+
+#login-icon{
+  margin-left: 60px;
+}
+#explorar-icon{
+  margin-left: 40px;
+}
+#cadastro-icon{
+  margin-left: 10px;
+}

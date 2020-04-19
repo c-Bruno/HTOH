@@ -1,9 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
     <ion-title>
-      Blank
+      
     </ion-title>
-  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -12,7 +10,7 @@
 
   <div id="container">
     <strong></strong>
-      <p><ion-button class="btns efeito efeito-1" fill="clear">
+      <p><ion-button class="btns efeito efeito-1" fill="clear" (click)="openLogin()">
         Login
         <ion-icon id="login-icon" name="chevron-forward-outline"></ion-icon>
       </ion-button></p>

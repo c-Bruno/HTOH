@@ -1,7 +1,8 @@
 {
   "name": "branco",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

@@ -14,6 +14,13 @@ ion-content {
   ion-item {
     border-radius: 30px !important;
     padding-left: 0px !important;
+
+    background-color: #F2F3F7;
+
+    width: 245px;
+    margin-left: 30px;
+    margin-left: 30px;
+    
     margin-bottom: 10px;
     opacity: 0.7;
     font-size: 0.9em;
@@ -26,16 +33,25 @@ ion-list {
   background-color:#F2F3F7;
 }
 
+/* ion-input{
+  background-color: #F2F3F7;
+  color: #605858;
+} */
+
 .login-button {
   position: absolute;
-
   width: 220px;
   height: 40px;
-  border-radius: 30px;
+ 
   background-color: transparent;
-  border: solid 1px;
   color: #605858;
+
+  border: solid 1px;
+  border-radius: 30px;
+  border-color: #605858 ;
+  
   font-size: 0.9em;
+
   margin-top: 17px;
   margin-left: -230px;
 } 
@@ -43,6 +59,7 @@ ion-list {
 .login-button-fundo{
   width: 220px;
   height: 40px;
+
   border-radius: 30px;
   background-color: #B6E6E0;
   margin: 10px -5px -30px 20px;
@@ -51,3 +68,19 @@ ion-list {
 .login-box {
   padding: 20px 20px 0px 20px;
 }
+
+.login-input-1{
+  margin-top: 50px;
+}
+
+#user-icon{
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+#lock-icon{
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+

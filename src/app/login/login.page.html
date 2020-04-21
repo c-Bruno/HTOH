@@ -1,23 +1,35 @@
 <ion-header>
     <ion-title> 
-
+        
     </ion-title>
 </ion-header>
 
 <ion-content>
+    <ion-button fill="clear" (click)="backSplash()">
+        <ion-icon id="back-button" name="chevron-back"></ion-icon></ion-button>
+
+        <ion-list id="circulo-amarelo-1">
+        </ion-list>
+
+        <ion-list id="circulo-amarelo-2">
+        </ion-list>
+
+        <ion-list id="circulo-amarelo-3">
+        </ion-list>
+
     <div>
         <ion-row>
             <ion-col>
-            <ion-list>
+            <ion-list id="caixa-branca">
     
                 <ion-item class="login-input-1">
                     <ion-icon id="user-icon" name="person-sharp"></ion-icon>
-                    <ion-input placeholder="E-mail" clearInput type="text"></ion-input>
+                    <ion-input placeholder="E-mail" type="text"></ion-input>
                 </ion-item>
     
                 <ion-item>
                     <ion-icon id="lock-icon" name="lock-open"></ion-icon>
-                    <ion-input placeholder="Senha" clearInput type="password"></ion-input>
+                    <ion-input placeholder="Senha" type="password"></ion-input>
                 </ion-item>
 
                 <ion-row>

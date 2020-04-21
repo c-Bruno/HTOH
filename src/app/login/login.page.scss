@@ -15,7 +15,7 @@ ion-content {
     border-radius: 30px !important;
     padding-left: 0px !important;
 
-    background-color: #F2F3F7;
+    color: #F2F3F7 !important;
 
     width: 245px;
     margin-left: 30px;
@@ -24,13 +24,6 @@ ion-content {
     margin-bottom: 10px;
     opacity: 0.7;
     font-size: 0.9em;
-}
-
-ion-list {
-  margin: 210px 30px 10px 30px;
-  height: 260px;
-  border-radius: 30px;
-  background-color:#F2F3F7;
 }
 
 /* ion-input{
@@ -73,6 +66,52 @@ ion-list {
   margin-top: 50px;
 }
 
+#caixa-branca{
+  margin: 180px 30px 10px 30px;
+  height: 260px;
+  border-radius: 30px;
+  background-color:#F2F3F7;
+}
+
+#circulo-amarelo-1{
+  margin-left: -23px;
+  margin-top: 344px;
+
+  width: 50px;
+  height: 50px;
+  opacity: 65%;
+
+  border-radius: 50px;
+  position: absolute;
+  background-color: #EEF52A;
+}
+
+#circulo-amarelo-2{
+  margin-left: -10px;
+  margin-top: 140px;
+
+  width: 105px;
+  height: 100px;
+  opacity: 65%;
+
+  border-radius: 50px;
+  position: absolute;
+  background-color: #EEF52A;
+}
+
+#circulo-amarelo-3{
+  margin-top: -40px;
+  margin-left: 124px;
+
+  width: 230px;
+  height: 220px;
+  border-radius: 70%;
+
+  opacity: 65%;
+  position: absolute;
+  background-color: #EEF52A;
+}
+
 #user-icon{
   margin-right: 10px;
   font-size: 17px;
@@ -83,4 +122,11 @@ ion-list {
   font-size: 17px;
 }
 
-
+#back-button{
+  float: left;
+  background-color: transparent;
+  height: 30px;
+    width: 30px;
+    background: #7DBFCD;
+    color: white;
+}

@@ -1,0 +1,33 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  
+  <ion-button fill="clear" (click)="backLogin()">
+    <ion-icon id="back-button" name="chevron-back"></ion-icon></ion-button>
+
+  <div>
+    <ion-list id="big-circle"></ion-list>
+    <ion-list id="medium-circle"></ion-list>
+    <ion-list id="small-circle"></ion-list>
+
+    <img id="image-globo" src="../../assets/icon/remember_globo.png"  class="rotate-img">
+    <img id="image-geo" src="../../assets/icon/remember_geo.png">
+    <img id="image-cpu" src="../../assets/icon/remember_cpu.png">
+    <img id="image-quest" src="../../assets/icon/remember_quest.png">
+  </div>
+
+  <ion-row> 
+    <p class="remember">Esqueceu sua senha ?</p>
+  </ion-row>
+
+  <div>
+    <ion-item class="login-input-1">
+      <ion-icon id="user-icon" name="mail-outline"></ion-icon>
+      <ion-input placeholder="E-mail" type="text"></ion-input>
+  </ion-item>
+
+  <ion-button id="send-button" (click)="backLogin()">Enviar e-mail</ion-button>   
+  </div>
+
+</ion-content>

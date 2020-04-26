@@ -17,4 +17,8 @@ export class LoginPage implements OnInit {
     this.navCtrl.navigateRoot('/home');
   }
 
+  rememberButton(){
+    this.navCtrl.navigateRoot('/remember')
+  }
+
 }

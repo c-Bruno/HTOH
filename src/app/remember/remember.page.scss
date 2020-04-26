@@ -1,0 +1,133 @@
+
+ion-content {
+--background: #ffffff;
+}
+
+ion-row {
+    position: absolute;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 500px;
+
+}
+
+ion-item {  
+    width: 350px;
+    margin-left: 5px;
+    margin-top: 550px;
+  
+    opacity: 0.7;
+    font-size: 1em;
+}
+
+ion-input{
+    color: #302e2e;
+    border: transparent;
+} 
+
+#back-button{
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    color: #ffffff;
+}
+
+
+#send-button{
+    margin-top: 40px;
+    margin-left: 40px;
+
+    width: 295px;
+    height: 60px;   
+
+    background-color: #7DBFCD;
+    font-size: 1em;
+}
+
+#big-circle{
+    margin-left: -35px;
+    margin-top: -150px;
+
+    width: 450px;
+    height: 580px;
+
+    border-radius: 220px;
+    position: absolute;
+  
+    background-color: #EAEBF0;
+    box-shadow: 1px 1px 11px 2px #00000059;
+}
+
+#medium-circle{
+    margin-left: 25px;
+    margin-top: -40px;
+
+    width: 330px;
+    height: 330px;
+    border-radius: 200px;
+
+    position: absolute;
+    background-color: #B1B4BF;
+    box-shadow: 1px 1px 11px 2px #77777759;
+    
+}
+
+#small-circle{
+    margin-left: 100px;
+    margin-top: 30px;
+
+    width: 190px;
+    height: 190px;
+    border-radius: 200px;
+
+    position: absolute;
+    background-color: #F0F1F3;
+    box-shadow: 1px 1px 11px 2px #78787859;
+}
+
+#user-icon{
+    margin-right: 10px;
+    font-size: 30px;
+    color: #BABABA;
+}
+
+#image-globo{   
+    height: 65px;
+
+    margin-top: 580px;
+    margin-left: 295px;
+}
+
+#image-geo{
+    position: absolute;
+    height: 90px;
+
+    margin-top: 375px;
+    margin-left: 80px;
+}
+
+#image-cpu{
+    position: absolute;
+    height: 200px;
+
+    margin-left: 90px;
+    margin-top: 15px;
+}
+
+#image-quest{
+    position: absolute;
+    height: 50px;
+
+    margin-left: 320px;
+    margin-top: 160px;
+}
+
+#remember{
+    color: violet;
+}
+
+.rotate-img {
+    position: absolute;
+    transform: rotate(20grad);
+}

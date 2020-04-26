@@ -8,7 +8,7 @@ ion-row {
     align-items: center;
     text-align: center;
 
-    margin-top: 500px;
+    //margin-top: 500px;
 
 }
 
@@ -30,7 +30,7 @@ ion-input{
     background-color: transparent;
     height: 30px;
     width: 30px;
-    color: #ffffff;
+    color: #7DBFCD;
 }
 
 
@@ -41,13 +41,16 @@ ion-input{
     width: 295px;
     height: 60px;   
 
-    background-color: #7DBFCD;
+    color: white;
+    background-color:  #7DBFCD;
+    box-shadow: 1px 1px 11px 2px #00000059;
+    
     font-size: 1em;
 }
 
 #big-circle{
-    margin-left: -35px;
-    margin-top: -150px;
+    margin-left: -40px;
+    margin-top: -100px;
 
     width: 450px;
     height: 580px;
@@ -55,13 +58,13 @@ ion-input{
     border-radius: 220px;
     position: absolute;
   
-    background-color: #EAEBF0;
+    //background-color: #EAEBF0;
     box-shadow: 1px 1px 11px 2px #00000059;
 }
 
 #medium-circle{
     margin-left: 25px;
-    margin-top: -40px;
+    margin-top: 60px;
 
     width: 330px;
     height: 330px;
@@ -75,7 +78,7 @@ ion-input{
 
 #small-circle{
     margin-left: 100px;
-    margin-top: 30px;
+    margin-top: 130px;
 
     width: 190px;
     height: 190px;
@@ -89,13 +92,13 @@ ion-input{
 #user-icon{
     margin-right: 10px;
     font-size: 30px;
-    color: #BABABA;
+    color: #929292;
 }
 
 #image-globo{   
     height: 65px;
 
-    margin-top: 580px;
+    margin-top: 660px;
     margin-left: 295px;
 }
 
@@ -103,8 +106,8 @@ ion-input{
     position: absolute;
     height: 90px;
 
-    margin-top: 375px;
-    margin-left: 80px;
+    margin-top: 415px;
+    margin-left: 35px;
 }
 
 #image-cpu{
@@ -112,7 +115,7 @@ ion-input{
     height: 200px;
 
     margin-left: 90px;
-    margin-top: 15px;
+    margin-top: 125px;
 }
 
 #image-quest{
@@ -120,11 +123,23 @@ ion-input{
     height: 50px;
 
     margin-left: 320px;
-    margin-top: 160px;
+    margin-top: 135px;
 }
 
-#remember{
-    color: violet;
+.title{
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+
+    margin-top: 470px;
+    margin-left: 100px;
+}
+
+.stitle{
+    margin-top: 495px;
+
+    color: #929292;
+    font-size: 14px;
 }
 
 .rotate-img {

@@ -17,4 +17,12 @@ export class RegisterPage implements OnInit {
   backSplash(){
     this.navCrtl.navigateRoot('/home');
   }
+
+  registerOng(){
+    this.navCrtl.navigateRoot('/home');
+  }
+
+  registerUser(){
+    this.navCrtl.navigateRoot('/home');
+  }
 }

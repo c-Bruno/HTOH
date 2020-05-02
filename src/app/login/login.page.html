@@ -24,20 +24,20 @@
     
                 <ion-item class="login-input-1">
                     <ion-icon id="user-icon" name="person-sharp"></ion-icon>
-                    <ion-input placeholder="E-mail" type="text"></ion-input>
+                    <ion-input id="user-input" placeholder="E-mail" type="text"></ion-input>
                 </ion-item>
     
                 <ion-item>
                     <ion-icon id="lock-icon" name="lock-open"></ion-icon>
-                    <ion-input placeholder="Senha" type="password"></ion-input>
+                    <ion-input id="pass-input" placeholder="Senha" type="password"></ion-input>
                 </ion-item>
 
                 <button id="remember-button" ion-button fill="clear" (click)="rememberButton()">Esqueceu sua senha?</button>
 
                 <ion-row>
                     <ion-col>
-                        <button ion-button fill="clear" class="login-button-fundo"></button>
-                        <button ion-button class="login-button">Entrar</button>
+                        <button ion-button fill="clear" class="login-button-fundo" (click)="validate()"></button>
+                        <button ion-button class="login-button" (click)="validate()">Entrar</button>
                     </ion-col>
                 </ion-row>
                 

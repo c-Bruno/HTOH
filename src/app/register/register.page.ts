@@ -19,7 +19,7 @@ export class RegisterPage implements OnInit {
   }
 
   registerOng(){
-    this.navCrtl.navigateRoot('/home');
+    this.navCrtl.navigateRoot('/home')
   }
 
   registerUser(){

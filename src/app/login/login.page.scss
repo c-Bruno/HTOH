@@ -11,7 +11,6 @@ ion-row {
   text-align: center;
 }
 
-
 ion-item {
   border-radius: 30px;
   padding-left: 0px;
@@ -22,7 +21,15 @@ ion-item {
 
   opacity: 0.7;
   font-size: 0.9em;
-  border: solid 1px #BABABA;
+  //border: solid 1px #BABABA;
+}
+
+
+.border-invalid{
+  border: solid 2px #ff0000;
+}
+.border-valid{
+  border: solid 1px #646363;
 }
 
 ion-input{
@@ -31,6 +38,12 @@ ion-input{
 } 
 ion-icon{
   color: #302e2e;
+}
+
+.teste{
+  ion-item{
+    border: solid 1px #e90606;
+  } 
 }
 
 .login-button {

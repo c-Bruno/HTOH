@@ -8,6 +8,9 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  public isValid = true;
+  public viewPassword = false;
+  public passText = "";
 
   constructor(public navCtrl: NavController, public alertController: AlertController) { }
 
@@ -27,8 +30,8 @@ export class LoginPage implements OnInit {
   }
 
   validate(){
-    var user = String(document.getElementById('user-input').value);
-    var pass = String(document.getElementById('pass-input').value);
+    var user = String((document.getElementById('user-input') as unknown as HTMLInputElement).value);
+    var pass = String((document.getElementById('pass-input') as unknown as HTMLInputElement).value);
 
     var userPROVISORIO = 'HTOH';
     var passPROVISORIO = '1234';
@@ -39,14 +42,16 @@ export class LoginPage implements OnInit {
 
     else{
       this.Alert();
+      this.isValid = false;
     }
   }
 
   async Alert() {
     const alert = await this.alertController.create({
-      header: 'Login invalido!',
+      header: 'Login inválido!',
       message: 'O usuario e/ou senha informado não foram encontrados. Cheque os campos e tente novamente',
       buttons: ['OK'],
+      cssClass: 'alert'
     });
 
     await alert.present();

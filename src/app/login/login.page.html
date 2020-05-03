@@ -22,14 +22,17 @@
             <ion-col>
             <ion-list id="caixa-branca">
     
-                <ion-item class="login-input-1">
+                <ion-item class="login-input-1" [ngClass]=" isValid ? 'border-valid' : 'border-invalid'">
                     <ion-icon id="user-icon" name="person-sharp"></ion-icon>
                     <ion-input id="user-input" placeholder="E-mail" type="text"></ion-input>
                 </ion-item>
     
-                <ion-item>
+                <ion-item [ngClass]=" isValid ? 'border-valid' : 'border-invalid'">
                     <ion-icon id="lock-icon" name="lock-open"></ion-icon>
-                    <ion-input id="pass-input" placeholder="Senha" type="password"></ion-input>
+                    <ion-input *ngIf="!viewPassword" [(ngModel)]="passText" id="pass-input" placeholder="Senha" type="password"></ion-input>
+                    <ion-input *ngIf="viewPassword" [(ngModel)]="passText" id="pass-input" placeholder="Senha" type="text"></ion-input>
+                    <ion-icon *ngIf="!viewPassword" name="eye" (click)="viewPassword = !viewPassword"></ion-icon>
+                    <ion-icon *ngIf="viewPassword" name="eye-off" (click)="viewPassword = !viewPassword"></ion-icon>
                 </ion-item>
 
                 <button id="remember-button" ion-button fill="clear" (click)="rememberButton()">Esqueceu sua senha?</button>

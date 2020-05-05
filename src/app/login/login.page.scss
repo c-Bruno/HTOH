@@ -21,29 +21,27 @@ ion-item {
 
   opacity: 0.7;
   font-size: 0.9em;
-  //border: solid 1px #BABABA;
+  border: solid 1px #646363;
 }
 
 
 .border-invalid{
-  border: solid 2px #ff0000;
+  ion-input{
+    color: #ff0000;
+  }
 }
 .border-valid{
-  border: solid 1px #646363;
+  ion-input{
+    color: #646363;
+  }
 }
 
 ion-input{
-  color: #302e2e;
+  font-weight: bold;
   border: transparent;
 } 
 ion-icon{
   color: #302e2e;
-}
-
-.teste{
-  ion-item{
-    border: solid 1px #e90606;
-  } 
 }
 
 .login-button {

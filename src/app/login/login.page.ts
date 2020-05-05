@@ -11,6 +11,7 @@ export class LoginPage implements OnInit {
   public isValid = true;
   public viewPassword = false;
   public passText = "";
+  public userText = "";
 
   constructor(public navCtrl: NavController, public alertController: AlertController) { }
 
@@ -25,23 +26,17 @@ export class LoginPage implements OnInit {
     this.navCtrl.navigateRoot('/remember') 
   }
 
-  getValor(){
-
-  }
-
   validate(){
-    var user = String((document.getElementById('user-input') as unknown as HTMLInputElement).value);
-    var pass = String((document.getElementById('pass-input') as unknown as HTMLInputElement).value);
-
-    var userPROVISORIO = 'HTOH';
+     var userPROVISORIO = 'HTOH';
     var passPROVISORIO = '1234';
 
-    if ((userPROVISORIO == user) && (passPROVISORIO == pass)){
-      console.log(`Consegui logar com sucesso utilzando o usuario ${user} e senha ${pass}`)
+    if ((userPROVISORIO == this.userText) && (passPROVISORIO == this.passText)){
+      console.log(`Consegui logar com sucesso utilzando o usuario ${this.userText} e senha ${this.passText}`)
     }    
 
     else{
       this.Alert();
+      this.passText = "";
       this.isValid = false;
     }
   }
@@ -55,5 +50,9 @@ export class LoginPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  busca(){
+    this.isValid = true;
   }
 }

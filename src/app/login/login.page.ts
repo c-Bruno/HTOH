@@ -26,12 +26,17 @@ export class LoginPage implements OnInit {
     this.navCtrl.navigateRoot('/remember') 
   }
 
+  loginButton(){
+    this.navCtrl.navigateRoot('/feed');
+  }
+
   validate(){
      var userPROVISORIO = 'HTOH';
     var passPROVISORIO = '1234';
 
     if ((userPROVISORIO == this.userText) && (passPROVISORIO == this.passText)){
       console.log(`Consegui logar com sucesso utilzando o usuario ${this.userText} e senha ${this.passText}`)
+      this.loginButton();
     }    
 
     else{

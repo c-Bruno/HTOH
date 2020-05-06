@@ -8,6 +8,7 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
   styleUrls: ['./remember.page.scss'],
 })
 export class RememberPage implements OnInit {
+  public emailText = "";
 
   constructor(public navCtrl: NavController, public alertController: AlertController, public emailComposer: EmailComposer) { }
 
@@ -35,6 +36,7 @@ export class RememberPage implements OnInit {
       buttons: [{
         text: 'OK', 
         handler: (blah) =>{
+          console.log(this.emailText);
           this.OpenEmailComposer();
         }}],
     });

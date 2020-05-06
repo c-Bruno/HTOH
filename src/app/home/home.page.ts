@@ -17,7 +17,7 @@ export class HomePage {
   }
 
   openExplore(){
-
+    this.navCtrl.navigateRoot('/feed');
   }
 
   openSingUp(){

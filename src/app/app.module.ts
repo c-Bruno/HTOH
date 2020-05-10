@@ -10,7 +10,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HomePageModule } from './home/home.module';
+
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { Camera}  from '@ionic-native/camera/ngx';
 
 
 @NgModule({
@@ -21,6 +23,7 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
     StatusBar,
     SplashScreen,
     EmailComposer,
+    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }    
   ],
   bootstrap: [AppComponent]

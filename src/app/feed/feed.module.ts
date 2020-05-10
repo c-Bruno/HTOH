@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { FeedPageRoutingModule } from './feed-routing.module';
 
 import { FeedPage } from './feed.page';
+import { Camera, CameraOptions}  from '@ionic-native/camera/ngx';
 
 @NgModule({
   imports: [

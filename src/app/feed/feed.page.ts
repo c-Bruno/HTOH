@@ -40,14 +40,29 @@ photo: String = '';
 
   async Alert() {
     const alert = await this.alertController.create({
-      header: 'Login inválido!',
-      message: 'O usuario e/ou senha informado não foram encontrados. Cheque os campos e tente novamente',
+      header: 'Escolher Foto',
+      //message: 'Como deseja prosseguir ?',
       buttons: [{
-        text: 'OK', 
+        text: 'Tirar foto', 
+        
         handler: (blah) =>{
           console.log(this.camera);
           this.takePicture();
-        }}],
+        }},
+      
+        {
+        text: 'Enviar da Galeria', 
+        handler: (blah) =>{
+          console.log('Pegar imagem da galeria');
+          //this.takePicture();
+        }},
+
+        {
+          text: 'Cancelar operação',
+          role: 'cancel',
+        }
+      ],
+
       cssClass: 'alert'
     });
 

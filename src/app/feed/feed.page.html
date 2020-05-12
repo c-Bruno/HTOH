@@ -4,8 +4,12 @@
     </ion-title>
 </ion-header>
 
-<ion-content>
-  <ion-app>
+<ion-content style="background-color: #7DBFCD;">
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+
     <ion-menu side="start" content-id="main-content" >
       <!--Entre as tags HEADER abaixo, esta o "cabeçalho" do side-menu. Contendo a foto de perfil do usuario e o seu nome -->
       <ion-header id="header-side-menu">       
@@ -45,32 +49,87 @@
             <ion-label>Sobre Nós</ion-label>
           </ion-item>
 
-          <!-- <ion-item>
-            <ion-icon name="warning" slot="start"></ion-icon>
-            <ion-label>Spam</ion-label>
-          </ion-item> -->
+          <ion-item id="back-button" (click)="backSplash()">
+            <ion-icon name="arrow-undo-circle" slot="start"></ion-icon>
+            <ion-label>Sair</ion-label>
+          </ion-item>
 
+          
         </ion-list>
       </ion-content>
     </ion-menu>
 
     <div class="ion-page" id="main-content">
-      <ion-header>
-        <ion-toolbar>
+      <ion-header >
+        <ion-toolbar >
 
           <ion-buttons  slot="start">
-            <ion-menu-button></ion-menu-button>
+            <ion-menu-button style="color: whitesmoke;"></ion-menu-button>
           </ion-buttons>
 
           <ion-title></ion-title>
 
           <ion-buttons  slot="end">
-            <ion-icon id="image-add" name="images" class="button-size" (click)="Alert()"></ion-icon>
+            <ion-icon id="image-add" name="images" class="button-size" (click)="ActionSheet()"></ion-icon>
           </ion-buttons>
 
         </ion-toolbar>
       </ion-header>
     </div>
-  </ion-app>
+  
+<!--   <div>
+    <ion-button color="light">
+      Filtros personalizados
+      <ion-icon name="golf-outline"></ion-icon>
+    </ion-button>
 
+
+    <ion-segment scrollable value="heart">
+        <ion-segment-button value="home">
+          <ion-icon name="home"></ion-icon>
+          <ion-label>Todos</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="heart">
+          <ion-icon name="heart"></ion-icon>
+          <ion-label>Cachorros</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="pin">
+          <ion-icon name="pin"></ion-icon>
+          <ion-label>Gatos</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+  </div> -->
+
+   <div>
+   <ion-list id='feed-list'> 
+      <ion-card *ngFor="let item of items" style="box-shadow: 1px 1px 11px 2px #00000059;">
+        <img src="{{animal_image}}">
+        <ion-card-header>
+          <ion-card-title style="color: #989898;">{{animal_name}}
+            <ion-icon id="image-add" name="male-outline"></ion-icon>
+          </ion-card-title>
+        </ion-card-header>
+       
+        <ion-card-content>
+          {{animal_text}}
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Carregando postagens anteriores...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+   </div>
+   
+<!--    <ion-buttons *ngIf="viewButton" style="color: red" id="viewButton"> SOU UM BOTÂO
+    <ion-icon id="image-add" name="images" class="button-size" (click)="ActionSheet()"></ion-icon>
+  </ion-buttons> -->
+  
+    <p id='teste' aling="center"><img src="{{ photo }}"></p>
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, AlertController } from '@ionic/angular';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-remember',
@@ -10,7 +11,12 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
 export class RememberPage implements OnInit {
   public emailText = "";
 
-  constructor(public navCtrl: NavController, public alertController: AlertController, public emailComposer: EmailComposer) { }
+  constructor(
+    public navCtrl: NavController,
+    public alertController: AlertController, 
+    public emailComposer: EmailComposer,
+    public toastController: ToastController
+    ) { }
 
   ngOnInit() {
   }

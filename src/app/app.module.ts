@@ -12,7 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomePageModule } from './home/home.module';
 
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
-import { Camera}  from '@ionic-native/camera/ngx';
+import { Camera }  from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/File/ngx'
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { Camera}  from '@ionic-native/camera/ngx';
     SplashScreen,
     EmailComposer,
     Camera,
+    File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }    
   ],
   bootstrap: [AppComponent]

@@ -84,8 +84,7 @@
     </div>
 
     <div>
-      <ion-button id="filter-button" fill="clear">
-       <!--  <fa-icon icon="graduation-cap" slot="end"></fa-icon> -->
+      <ion-button id="filter-button" fill="clear" (click)="openFilters()">
        <ion-icon name="color-filter" slot="start"></ion-icon>
         Filtros personalizado
         <ion-icon></ion-icon>
@@ -111,7 +110,7 @@
     <!--Composição do card de informação do animal ============================================================================================================= -->
    <ion-list id='feed-list' *ngFor="let item of items">
 
-    <ion-slides id="carrousel-animal" pager="true" [options]="slideOpts">
+    <ion-slides id="carrousel-animal" [options]="slideOpts">
       <ion-slide class="slide">
         <img src="{{animal_image}}">
       </ion-slide>

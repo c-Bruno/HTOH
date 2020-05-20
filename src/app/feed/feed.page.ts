@@ -6,6 +6,7 @@ import { ActionSheetController } from '@ionic/angular';
 
 import { ViewChild } from '@angular/core';
 import { IonInfiniteScroll } from '@ionic/angular';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 
 @Component({
@@ -16,10 +17,11 @@ import { IonInfiniteScroll } from '@ionic/angular';
 export class FeedPage implements OnInit {
   @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
   public photo: string = ""; // foto
-  public viewButton = false;
 
   animal_name = "Pipoca";
   animal_image = "../../assets/imgs/pipoca.png";
+  animal_image2 = "../../assets/imgs/pipoca2.png";
+  animal_image3 = "../../assets/imgs/pipoca3.png";
   animal_text = "Oi, meu nome é Pipoca e estou a procura de um lar.Fui encontrado próximo a rodoviária após ter sido abandonado.";
 
   items = [this.animal_name, this.animal_image, this.animal_text];
@@ -28,9 +30,16 @@ export class FeedPage implements OnInit {
     private camera: Camera, 
     public alertController: AlertController, 
     public navCtrl: NavController,
+    public emailComposer: EmailComposer,
     public actionSheetController: ActionSheetController
     ){ this.addMoreItems();}
 
+
+    slideOpts = {
+      initialSlide: 0,
+      speed: 10,
+      effect: "fade"
+    };
 
   // Permite que o usuario tire uma foto utilizando a camera do dispositivo
   // Sendo acionada dependendo da escolha do usuario na ActionSheet
@@ -125,7 +134,7 @@ export class FeedPage implements OnInit {
 
   //Mantem o scroll da pagina sempre disponivel, carregando sempre um novo conteudo quando o usuario chega ao final da pagina
    // Para essa função é usado o array items, que vai conter a informação a ser carregada na tela, sempre de 10 em 10 items
-  loadData(event){this.viewButton = true;
+  loadData(event){
     setTimeout(() => {
       console.log('Concluido');     
       this.addMoreItems();     
@@ -150,4 +159,16 @@ export class FeedPage implements OnInit {
       event.target.complete();
     }, 1000);
   }
+  
+  //Acionado na opção de "Fale conosco", onde sera aberto o email do usuario para nos encaminhar uma mensagem
+  OpenEmailComposer(){
+    this.emailComposer.open({
+     to: 'happyuserhelp@gmail.com',
+     /* cc: 'erika@mustermann.de',
+     bcc: ['john@doe.com', 'jane@doe.com'], */
+     subject: 'Duvidas',
+     /* body: 'How are you? Nice greetings from Leipzig', */
+   }) 
+ }  
+  
 } 

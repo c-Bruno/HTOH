@@ -9,12 +9,15 @@ import { FeedPageRoutingModule } from './feed-routing.module';
 import { FeedPage } from './feed.page';
 import { Camera, CameraOptions}  from '@ionic-native/camera/ngx';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FeedPageRoutingModule
+    FeedPageRoutingModule,
+    FontAwesomeModule
   ],
   declarations: [FeedPage]
 })

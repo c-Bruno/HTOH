@@ -85,12 +85,13 @@
 
     <div>
       <ion-button id="filter-button" fill="clear">
-        <ion-icon></ion-icon>
-        Filtros personalizados
+       <!--  <fa-icon icon="graduation-cap" slot="end"></fa-icon> -->
+       <ion-icon name="color-filter" slot="start"></ion-icon>
+        Filtros personalizado
         <ion-icon></ion-icon>
       </ion-button>
 
- <!--      <ion-segment id="default-filter" scrollable value="heart">
+      <ion-segment id="options-button" scrollable value="heart">
         <ion-segment-button value="home">
           <ion-icon name="home"></ion-icon>
           <ion-label>Todos</ion-label>
@@ -105,35 +106,40 @@
           <ion-icon name="pin"></ion-icon>
           <ion-label>Gatos</ion-label>
         </ion-segment-button>
-    </ion-segment> -->
+    </ion-segment>
 
-    <!--Composição do card ============================================================================================================= -->
-   <ion-list id='feed-list'>
-      <ion-card *ngFor="let item of items" style="box-shadow: 1px 1px 11px 2px #00000059;">
+    <!--Composição do card de informação do animal ============================================================================================================= -->
+   <ion-list id='feed-list' *ngFor="let item of items">
 
-        <ion-slides pager="true" [options]="slideOpts">
-          <ion-slide class="slide">
-            <h1><img src="{{animal_image}}"></h1>
-          </ion-slide>
-          <ion-slide class="slide">
-            <h1><img src="{{animal_image2}}"></h1>
-          </ion-slide>
-          <ion-slide class="slide">
-            <h1><img src="{{animal_image3}}"></h1>
-          </ion-slide>
-        </ion-slides>
-
+    <ion-slides id="carrousel-animal" pager="true" [options]="slideOpts">
+      <ion-slide class="slide">
+        <img src="{{animal_image}}">
+      </ion-slide>
+      <ion-slide class="slide">
+        <img src="{{animal_image2}}">
+      </ion-slide>
+      <ion-slide class="slide">
+        <img src="{{animal_image3}}">
+      </ion-slide>
+    </ion-slides>
+    
+      <ion-card id="info-card">
         <ion-card-header>
-          <ion-card-title style="color: #989898;">{{animal_name}}
-            <ion-icon id="image-add" name="male-outline"></ion-icon>
-          </ion-card-title>
+          
+          <ion-item id="user-post">
+            <ion-avatar item-start slot="start">
+              <img src="../../assets/imgs/usuarioLogado.jpg">
+            </ion-avatar>
+              <h5>Alex Silva</h5>
+            <ion-icon class="icon-size" name="ellipsis-horizontal" slot="end"></ion-icon>
+          </ion-item>  
         </ion-card-header>
        
-        <ion-card-content>
+       <!--  <ion-card-content>
           {{animal_text}}
         </ion-card-content>
-
-        <ion-button fill="clear" class="efeito">Mais informações</ion-button>
+        <ion-button fill="clear" class="efeito" style="margin-top: 55%;">Mais informações</ion-button> -->
+        
       </ion-card>
     </ion-list>
 

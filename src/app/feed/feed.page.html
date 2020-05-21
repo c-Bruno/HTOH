@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-
+<!-- Refresh da tela ================================================================================================================================ -->
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content style="background-color: #1B2531"
       pullingIcon="paw"
@@ -13,7 +13,7 @@
     </ion-refresher-content>
   </ion-refresher>
 
-
+<!-- Composição do menu lateral ========================================================================================================================================= -->
     <ion-menu side="start" content-id="main-content" >
       <!--TAG com o cabeçalho do menu============================================================================================================= -->
       <ion-header id="header-side-menu" style=" background-image: url('../../assets/icon/icons_default_user/Perfil_1.jpg');">      
@@ -65,6 +65,7 @@
       </ion-content>
     </ion-menu>
 
+<!-- Tollbar + botões de filtro ======================================================================================================================= -->
     <div class="ion-page" id="main-content">
       <ion-header >
         <ion-toolbar >
@@ -91,23 +92,24 @@
       </ion-button>
 
       <ion-segment id="options-button" scrollable value="heart">
-        <ion-segment-button value="home">
-          <ion-icon name="home"></ion-icon>
+        <ion-segment-button value="Todos">
+          <!-- <ion-icon name="paw"></ion-icon> -->
           <ion-label>Todos</ion-label>
         </ion-segment-button>
 
-        <ion-segment-button value="heart">
-          <ion-icon name="heart"></ion-icon>
+        <ion-segment-button value="Cachorros">
+          <!-- <ion-icon name="heart"></ion-icon> -->
           <ion-label>Cachorros</ion-label>
         </ion-segment-button>
 
-        <ion-segment-button value="pin">
-          <ion-icon name="pin"></ion-icon>
+        <ion-segment-button value="Gatos">
+          <!-- <ion-icon name="pin"></ion-icon> -->
           <ion-label>Gatos</ion-label>
         </ion-segment-button>
     </ion-segment>
+   
 
-    <!--Composição do card de informação do animal ============================================================================================================= -->
+<!--Composição do card de informação do animal com scroll infinito ======================================================================================= -->
    <ion-list id='feed-list' *ngFor="let item of items">
 
     <ion-slides id="carrousel-animal" [options]="slideOpts">
@@ -126,23 +128,35 @@
         <ion-card-header>
           
           <ion-item id="user-post">
-            <ion-avatar item-start slot="start">
+            <ion-avatar id="user-avatar" item-start slot="start">
               <img src="../../assets/imgs/usuarioLogado.jpg">
             </ion-avatar>
-              <h5>Alex Silva</h5>
-            <ion-icon class="icon-size" name="ellipsis-horizontal" slot="end"></ion-icon>
+            
+              <ion-item id="user-name">Alex Silva</ion-item>
+              <ion-item id="user-location">
+                <ion-icon class="icon-padding" name="earth"></ion-icon>
+                Campinas 
+              </ion-item>
+              
+              <ion-icon class="icon-size" name="ellipsis-horizontal" slot="end">
+            </ion-icon>
+
+            <!-- <ion-select interface="popover">
+              <ion-select-option value="Filhote">Mais informações</ion-select-option>
+            </ion-select> -->
           </ion-item>  
-        </ion-card-header>
+       </ion-card-header>
        
-       <!--  <ion-card-content>
-          {{animal_text}}
+
+       <ion-card-content>
+          <ion-item id="post-time">2h atrás</ion-item>
+          <ion-item id="animal-text"> {{animal_text}}</ion-item>
         </ion-card-content>
-        <ion-button fill="clear" class="efeito" style="margin-top: 55%;">Mais informações</ion-button> -->
-        
       </ion-card>
     </ion-list>
 
-  <!--Refresh ============================================================================================================= -->  
+
+<!--Refresh ========================================================================================================================================= -->  
     <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
       <ion-infinite-scroll-content
         loadingSpinner="bubbles"

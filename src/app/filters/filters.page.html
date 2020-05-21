@@ -3,7 +3,7 @@
 
 <ion-content>
 
-  <ion-button fill="clear">
+  <ion-button fill="clear" (click)="back()">
     <ion-icon id="back-button" name="chevron-back"></ion-icon></ion-button>
 
   <ion-searchbar placeholder="Nome do animal" showCancelButton="focus" cancelButtonText=""></ion-searchbar>
@@ -22,28 +22,28 @@
   </ion-item>
 
 
- <!--  <ion-list>
+  <ion-list>
     <ion-radio-group value="biff">
       <ion-list-header>
-        <ion-label>Name</ion-label>
+        <ion-label>Genero</ion-label>
       </ion-list-header>
   
       <ion-item>
-        <ion-label>Biff</ion-label>
-        <ion-radio slot="start" value="biff"></ion-radio>
+        <ion-label>Macho</ion-label>
+        <ion-radio slot="start" value="Macho"></ion-radio>
       </ion-item>
   
       <ion-item>
-        <ion-label>Griff</ion-label>
+        <ion-label>Femêa</ion-label>
         <ion-radio slot="start" value="griff"></ion-radio>
       </ion-item>
   
       <ion-item>
-        <ion-label>Buford</ion-label>
+        <ion-label>Ambos</ion-label>
         <ion-radio slot="start" value="buford"></ion-radio>
       </ion-item>
     </ion-radio-group>
-  </ion-list> -->
+  </ion-list>
 
 
   <ion-item>
@@ -54,5 +54,10 @@
        <ion-select-option value="Idoso">Maior de 8 anos</ion-select-option>
     </ion-select>
   </ion-item>
+
+
+  <ion-searchbar placeholder="Localização" showCancelButton="focus" cancelButtonText=""></ion-searchbar>
+
+
 
 </ion-content>

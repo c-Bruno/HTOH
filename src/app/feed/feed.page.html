@@ -1,0 +1,170 @@
+<ion-header>
+    <ion-title>
+
+    </ion-title>
+</ion-header>
+
+<ion-content>
+<!-- Refresh da tela ================================================================================================================================ -->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content style="background-color: #1B2531"
+      pullingIcon="paw"
+      refreshingSpinner="circles">
+    </ion-refresher-content>
+  </ion-refresher>
+
+<!-- Composição do menu lateral ========================================================================================================================================= -->
+    <ion-menu side="start" content-id="main-content" >
+      <!--TAG com o cabeçalho do menu============================================================================================================= -->
+      <ion-header id="header-side-menu">      
+          <ion-title></ion-title>
+        <img id="image-profile" src="../../assets/icon/icons_default_user/Perfil_1.jpg ">
+      </ion-header>
+
+      <ion-content>
+        <ion-list id='side-menu'>
+          <!-- Composição do side menu -->
+
+          <ion-item>
+            <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+            <ion-label>Perfil</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="paw" slot="start"></ion-icon>
+            <ion-label>Pets</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="bandage" slot="start"></ion-icon>
+            <ion-label>ONGs</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="search-circle" slot="start"></ion-icon>
+            <ion-label>Perdidos</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="information-circle" slot="start"></ion-icon>
+            <ion-label>Sobre Nós</ion-label>
+          </ion-item>
+
+          <ion-item id="send-button" (click)="OpenEmailComposer()">
+            <ion-icon name="chatbox" slot="start"></ion-icon>
+            <ion-label>Fale conosco</ion-label>
+          </ion-item>
+
+          <ion-item id="back-button" (click)="backSplash()">
+            <ion-icon name="arrow-undo-circle" slot="start"></ion-icon>
+            <ion-label>Sair</ion-label>
+          </ion-item>
+
+          
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+<!-- Tollbar + botões de filtro ======================================================================================================================= -->
+    <div class="ion-page" id="main-content">
+      <ion-header >
+        <ion-toolbar >
+
+          <ion-buttons  slot="start">
+            <ion-menu-button style="color: whitesmoke;"></ion-menu-button>
+          </ion-buttons>
+
+          <ion-title></ion-title>
+
+          <ion-buttons  slot="end">
+            <ion-icon id="image-add" name="images" class="button-size" (click)="ActionSheet()"></ion-icon>
+          </ion-buttons>
+
+        </ion-toolbar>
+      </ion-header>
+    </div>
+
+    <div>
+      <ion-button id="filter-button" fill="clear" (click)="openFilters()">
+       <ion-icon name="color-filter" slot="start"></ion-icon>
+        Filtros personalizado
+        <ion-icon></ion-icon>
+      </ion-button>
+
+      <ion-segment id="options-button" scrollable value="heart">
+        <ion-segment-button value="Todos">
+          <!-- <ion-icon name="paw"></ion-icon> -->
+          <ion-label>Todos</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="Cachorros">
+          <!-- <ion-icon name="heart"></ion-icon> -->
+          <ion-label>Cachorros</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="Gatos">
+          <!-- <ion-icon name="pin"></ion-icon> -->
+          <ion-label>Gatos</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+   
+
+<!--Composição do card de informação do animal com scroll infinito ======================================================================================= -->
+   <ion-list pager="true" id='feed-list' *ngFor="let item of items">
+
+    <ion-slides id="carrousel-animal" [options]="slideOpts">
+      <ion-slide class="slide">
+        <img src="{{animal_image}}">
+      </ion-slide>
+      <ion-slide class="slide">
+        <img src="{{animal_image2}}">
+      </ion-slide>
+      <ion-slide class="slide">
+        <img src="{{animal_image3}}">
+      </ion-slide>
+    </ion-slides>
+    
+      <ion-card id="info-card">
+        <ion-card-header>
+          
+          <ion-item id="user-post">
+            <ion-avatar id="user-avatar" item-start slot="start">
+              <img src="../../assets/imgs/usuarioLogado.jpg">
+            </ion-avatar>
+            
+              <ion-item id="user-name">Alex Silva</ion-item>
+              <ion-item id="user-location">
+                <ion-icon class="icon-padding" name="earth"></ion-icon>
+                Campinas 
+              </ion-item>
+              
+              <ion-icon class="icon-size" name="ellipsis-horizontal" slot="end"> Conhecer
+            </ion-icon>
+
+            <!-- <ion-select interface="popover">
+              <ion-select-option value="Filhote">Mais informações</ion-select-option>
+            </ion-select> -->
+          </ion-item>  
+       </ion-card-header>
+       
+
+       <ion-card-content>
+          <ion-item id="post-time">2h atrás</ion-item>
+          <ion-item id="animal-text"> {{animal_text}}</ion-item>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+
+<!--Refresh ========================================================================================================================================= -->  
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Carregando postagens anteriores...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+   </div>
+  
+    <p id='teste' aling="center"><img src="{{ photo }}"></p>
+    
+</ion-content>

@@ -1,0 +1,63 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+
+  <ion-button fill="clear" (click)="back()">
+    <ion-icon id="back-button" name="chevron-back"></ion-icon></ion-button>
+
+  <ion-searchbar placeholder="Nome do animal" showCancelButton="focus" cancelButtonText=""></ion-searchbar>
+  <ion-searchbar placeholder="Nome do doador" showCancelButton="focus" cancelButtonText=""></ion-searchbar>
+  <ion-searchbar placeholder="Raça" showCancelButton="focus" cancelButtonText=""></ion-searchbar>
+
+  <ion-item>
+    <ion-label>Cor</ion-label>
+    <ion-select interface="popover" placeholder="Escolher">
+      <ion-select-option value="Branco">Branco</ion-select-option>
+      <ion-select-option value="Caramelo">Caramelo</ion-select-option>
+      <ion-select-option value="Cinza">Cinza</ion-select-option>
+      <ion-select-option value="Marrom">Marrom</ion-select-option>
+      <ion-select-option value="Preto">Preto</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-list>
+    <ion-radio-group value="biff">
+      <ion-list-header>
+        <ion-label>Genero</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Macho</ion-label>
+        <ion-radio slot="start" value="Macho"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Femêa</ion-label>
+        <ion-radio slot="start" value="griff"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Ambos</ion-label>
+        <ion-radio slot="start" value="buford"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+
+  <ion-item>
+    <ion-label>Idade</ion-label>
+    <ion-select interface="popover" placeholder="Escolher">
+      <ion-select-option value="Filhote">3 a 12 meses</ion-select-option>
+       <ion-select-option value="Adulto">1  a 7 anos</ion-select-option>
+       <ion-select-option value="Idoso">Maior de 8 anos</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-searchbar placeholder="Localização" showCancelButton="focus" cancelButtonText=""></ion-searchbar>
+
+
+
+</ion-content>

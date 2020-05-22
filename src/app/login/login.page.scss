@@ -1,35 +1,48 @@
 ion-content {
-    --background: #7DBFCD url('../../assets/imgs/Login.jpg') right bottom 0px/260px no-repeat;
-  }
-
-  ion-column{
-    align-self: center;
-  }
-
-  ion-row {
-    align-items: center;
-    text-align: center;
-  }
-
-  ion-item {
-    border-radius: 30px !important;
-    padding-left: 0px !important;
-
-    color: #F2F3F7 !important;
-
-    width: 245px;
-    margin-left: 30px;
-    margin-left: 30px;
-    
-    margin-bottom: 10px;
-    opacity: 0.7;
-    font-size: 0.9em;
+  --background: #7DBFCD url('../../assets/imgs/Login.jpg') right bottom 0px/260px no-repeat;
 }
 
-/* ion-input{
-  background-color: #F2F3F7;
-  color: #605858;
-} */
+ion-column{
+  align-self: center;
+}
+
+ion-row {
+  align-items: center;
+  text-align: center;
+}
+
+ion-item {
+  border-radius: 30px;
+  padding-left: 0px;
+
+  width: 245px;
+  margin-left: 30px; 
+  margin-bottom: 10px;
+
+  opacity: 0.7;
+  font-size: 0.9em;
+  border: solid 1px #646363;
+}
+
+
+.border-invalid{
+  ion-input{
+    color: #ff0000;
+  }
+}
+.border-valid{
+  ion-input{
+    color: #646363;
+  }
+}
+
+ion-input{
+  font-weight: bold;
+  border: transparent;
+} 
+ion-icon{
+  color: #302e2e;
+}
 
 .login-button {
   position: absolute;
@@ -60,10 +73,11 @@ ion-content {
 
 .login-box {
   padding: 20px 20px 0px 20px;
+  box-shadow: 1px 1px 11px 2px rgba(0,0,0,0.35);
 }
 
 .login-input-1{
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 #caixa-branca{
@@ -129,4 +143,16 @@ ion-content {
     width: 30px;
     background: #7DBFCD;
     color: white;
+}
+
+#remember-button{
+  position: relative;
+  background-color: transparent;
+
+  margin-top: -10px ;
+  margin-left: 155px;
+
+  font-size: 11px;
+  text-decoration: underline;
+  color: #1B2531;
 }

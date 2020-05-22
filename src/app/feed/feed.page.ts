@@ -9,8 +9,6 @@ import { IonInfiniteScroll } from '@ionic/angular';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 
-
-
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.page.html',
@@ -24,7 +22,7 @@ export class FeedPage implements OnInit {
   animal_image = "../../assets/imgs/pipoca.png";
   animal_image2 = "../../assets/imgs/pipoca2.png";
   animal_image3 = "../../assets/imgs/pipoca3.png";
-  animal_text = "Oi, meu nome é Pipoca e estou a procura de um lar.Fui encontrado próximo a rodoviária após ter sido abandonado.";
+  animal_text = "Oi, meu nome é Pipoca e estou a procura de um lar.Fui encontrado próximo a rodoviária após ter sido abandonado...";
 
   items = [this.animal_name, this.animal_image, this.animal_text];
 
@@ -41,11 +39,11 @@ export class FeedPage implements OnInit {
       initialSlide: 0,
       speed: 10,
       effect: "fade",
-      pager: true
     };
 
     ngOnInit() {
     }
+    
   
     async ActionSheet() { 
     //Solicita ao usuario a seleção de como a imagem deve ser escolhida.

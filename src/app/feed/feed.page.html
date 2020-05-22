@@ -16,7 +16,7 @@
 <!-- Composição do menu lateral ========================================================================================================================================= -->
     <ion-menu side="start" content-id="main-content" >
       <!--TAG com o cabeçalho do menu============================================================================================================= -->
-      <ion-header id="header-side-menu" style=" background-image: url('../../assets/icon/icons_default_user/Perfil_1.jpg');">      
+      <ion-header id="header-side-menu">      
           <ion-title></ion-title>
         <img id="image-profile" src="../../assets/icon/icons_default_user/Perfil_1.jpg ">
       </ion-header>
@@ -110,7 +110,7 @@
    
 
 <!--Composição do card de informação do animal com scroll infinito ======================================================================================= -->
-   <ion-list id='feed-list' *ngFor="let item of items">
+   <ion-list pager="true" id='feed-list' *ngFor="let item of items">
 
     <ion-slides id="carrousel-animal" [options]="slideOpts">
       <ion-slide class="slide">
@@ -138,7 +138,7 @@
                 Campinas 
               </ion-item>
               
-              <ion-icon class="icon-size" name="ellipsis-horizontal" slot="end">
+              <ion-icon class="icon-size" name="ellipsis-horizontal" slot="end"> Conhecer
             </ion-icon>
 
             <!-- <ion-select interface="popover">

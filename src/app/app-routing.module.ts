@@ -10,6 +10,8 @@ const routes: Routes = [
   { path: 'register', loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)},
   { path: 'feed', loadChildren: () => import('./feed/feed.module').then( m => m.FeedPageModule)},
   { path: 'filters', loadChildren: () => import('./filters/filters.module').then( m => m.FiltersPageModule)},
+  { path: 'profile', loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)},
+
 
   
 ];

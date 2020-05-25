@@ -179,4 +179,8 @@ export class FeedPage implements OnInit {
     openFilters(){
       this.navCtrl.navigateRoot('/filters');
     }
+
+    openProfile(){
+      this.navCtrl.navigateRoot('/profile');
+    }
 } 

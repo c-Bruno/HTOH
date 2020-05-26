@@ -211,7 +211,7 @@ export class FeedPage implements OnInit {
     }
 
   /* ROTAS ========================================================================================================================*/   
-  backSplash(){// Redirecionamento para a pagina Home
+    backSplash(){// Redirecionamento para a pagina Home
       this.navCtrl.navigateRoot('/home'); 
     }
 
@@ -221,5 +221,9 @@ export class FeedPage implements OnInit {
 
     openProfile(){
       this.navCtrl.navigateRoot('/profile');
+    }
+
+    openAnimalInfo(){
+      this.navCtrl.navigateRoot('/animal');
     }
 } 

@@ -18,6 +18,10 @@ export class FeedPage implements OnInit {
   @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
   public photo: string = ""; // foto
 
+  segment1:boolean=true;
+  segment2:boolean=false;
+  segment3:boolean=false;
+
   animal_name = "Pipoca";
   animal_image = "../../assets/imgs/pipoca.png";
   animal_image2 = "../../assets/imgs/pipoca2.png";
@@ -77,6 +81,7 @@ export class FeedPage implements OnInit {
       await actionSheet.present();
     }
 
+   /*API de envio de e-mail ==================================================================================================*/ 
     OpenEmailComposer(){
       //Acionado na opção de "Fale conosco", onde sera aberto o email do usuario para nos encaminhar uma mensagem
       this.emailComposer.open({
@@ -86,7 +91,7 @@ export class FeedPage implements OnInit {
       subject: 'Duvidas',
       /* body: 'How are you? Nice greetings from Leipzig', */
     }) 
-  }  
+    }  
 
     /* Adicionar nova imagem ===========================================================================================*/
     takePicture(){
@@ -148,13 +153,14 @@ export class FeedPage implements OnInit {
       setTimeout(() => {
         console.log('Concluido');     
         this.addMoreItems();     
-        event.target.complete();
+
+        /* event.target.complete(); */
       }, 500);
     }
 
     addMoreItems(){
       // Esta função é acionada tanto no construtor quanto pela loadData, para que possa alimentar a pagina feed
-      for(let i=1; i<10; i++)
+      for(let i=1; i<6; i++)
       this.items.push(this.animal_name, this.animal_image, this.animal_text);  
     }
     
@@ -163,20 +169,61 @@ export class FeedPage implements OnInit {
       console.log('Operação iniciada');
 
       setTimeout(() => {
-        this.items.push('aaa')
-
         console.log('Pagina atualizada');
-        event.target.complete();
+        /* event.target.complete(); */
       }, 1000);
     }
 
+    segmentChanged(event){
+      var segment = event.target.value;
+      if(segment == "segment1"){
+        this.segment1 = true;
+        this.segment2 = false;
+        this.segment3 = false;
+
+        this.animal_image = "../../assets/imgs/pipoca.png";
+        this.animal_text = "Oi, meu nome é Pipoca e estou a procura de um lar.Fui encontrado próximo a rodoviária após ter sido abandonado...";
+        
+        this.loadData(event);
+      }
+  
+      else if(segment == "segment2"){
+        this.segment1 = false;
+        this.segment2 = true;
+        this.segment3 = false;
+
+        this.animal_image = "../../assets/imgs/3.jpg";
+        this.animal_text = "Nessa aba esta sendo exibido os CACHORROS para adoção";
+
+        this.loadData(event);
+      }
+
+      else if(segment == "segment3"){
+        this.segment1 = false;
+        this.segment2 = false;
+        this.segment3 = true;
+
+        this.animal_image = "../../assets/imgs/pipoca2.png";
+        this.animal_text = "Nessa aba esta sendo exibido os GATOS para adoção";
+
+        this.loadData(event);
+      }
+    }
 
   /* ROTAS ========================================================================================================================*/   
-  backSplash(){// Redirecionamento para a pagina Home
+    backSplash(){// Redirecionamento para a pagina Home
       this.navCtrl.navigateRoot('/home'); 
     }
 
     openFilters(){
       this.navCtrl.navigateRoot('/filters');
+    }
+
+    openProfile(){
+      this.navCtrl.navigateRoot('/profile');
+    }
+
+    openAnimalInfo(){
+      this.navCtrl.navigateRoot('/animal');
     }
 } 

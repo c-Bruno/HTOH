@@ -91,24 +91,20 @@
         <ion-icon></ion-icon>
       </ion-button>
 
-      <ion-segment id="options-button" scrollable value="heart">
-        <ion-segment-button value="Todos">
-          <!-- <ion-icon name="paw"></ion-icon> -->
+      <ion-segment id="options-button" scrollable value="segment1" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="segment1">
           <ion-label>Todos</ion-label>
         </ion-segment-button>
 
-        <ion-segment-button value="Cachorros">
-          <!-- <ion-icon name="heart"></ion-icon> -->
+        <ion-segment-button value="segment2">
           <ion-label>Cachorros</ion-label>
         </ion-segment-button>
 
-        <ion-segment-button value="Gatos">
-          <!-- <ion-icon name="pin"></ion-icon> -->
+        <ion-segment-button value="segment3">
           <ion-label>Gatos</ion-label>
         </ion-segment-button>
     </ion-segment>
-   
-
+    
 <!--Composição do card de informação do animal com scroll infinito ======================================================================================= -->
    <ion-list pager="true" id='feed-list' *ngFor="let item of items">
 
@@ -128,22 +124,17 @@
         <ion-card-header>
           
           <ion-item id="user-post">
-            <ion-avatar id="user-avatar" item-start slot="start">
+            <ion-avatar id="user-avatar" item-start slot="start" (click)="openProfile()">
               <img src="../../assets/imgs/usuarioLogado.jpg">
             </ion-avatar>
             
-              <ion-item id="user-name">Alex Silva</ion-item>
-              <ion-item id="user-location">
+              <ion-item id="user-name" (click)="openProfile()">Alex Silva</ion-item>
+              <ion-item id="user-location" (click)="openProfile()">
                 <ion-icon class="icon-padding" name="earth"></ion-icon>
                 Campinas 
               </ion-item>
               
-              <ion-icon class="icon-size" name="ellipsis-horizontal" slot="end"> Conhecer
-            </ion-icon>
-
-            <!-- <ion-select interface="popover">
-              <ion-select-option value="Filhote">Mais informações</ion-select-option>
-            </ion-select> -->
+              <ion-button id="meet-button" fill="clear" slot="end" (click)="openAnimalInfo()">Conhecer</ion-button>
           </ion-item>  
        </ion-card-header>
        

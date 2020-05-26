@@ -170,7 +170,7 @@ export class FeedPage implements OnInit {
 
       setTimeout(() => {
         console.log('Pagina atualizada');
-        event.target.complete();
+        /* event.target.complete(); */
       }, 1000);
     }
 
@@ -183,7 +183,7 @@ export class FeedPage implements OnInit {
 
         this.animal_image = "../../assets/imgs/pipoca.png";
         this.animal_text = "Oi, meu nome é Pipoca e estou a procura de um lar.Fui encontrado próximo a rodoviária após ter sido abandonado...";
-
+        
         this.loadData(event);
       }
   

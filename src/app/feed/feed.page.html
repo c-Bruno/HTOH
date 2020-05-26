@@ -104,8 +104,7 @@
           <ion-label>Gatos</ion-label>
         </ion-segment-button>
     </ion-segment>
-   
-
+    
 <!--Composição do card de informação do animal com scroll infinito ======================================================================================= -->
    <ion-list pager="true" id='feed-list' *ngFor="let item of items">
 
@@ -129,8 +128,8 @@
               <img src="../../assets/imgs/usuarioLogado.jpg">
             </ion-avatar>
             
-              <ion-item id="user-name">Alex Silva</ion-item>
-              <ion-item id="user-location">
+              <ion-item id="user-name" (click)="openProfile()">Alex Silva</ion-item>
+              <ion-item id="user-location" (click)="openProfile()">
                 <ion-icon class="icon-padding" name="earth"></ion-icon>
                 Campinas 
               </ion-item>

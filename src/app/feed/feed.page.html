@@ -91,19 +91,16 @@
         <ion-icon></ion-icon>
       </ion-button>
 
-      <ion-segment id="options-button" scrollable value="heart">
-        <ion-segment-button value="Todos">
-          <!-- <ion-icon name="paw"></ion-icon> -->
+      <ion-segment id="options-button" scrollable value="segment1" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="segment1">
           <ion-label>Todos</ion-label>
         </ion-segment-button>
 
-        <ion-segment-button value="Cachorros">
-          <!-- <ion-icon name="heart"></ion-icon> -->
+        <ion-segment-button value="segment2">
           <ion-label>Cachorros</ion-label>
         </ion-segment-button>
 
-        <ion-segment-button value="Gatos">
-          <!-- <ion-icon name="pin"></ion-icon> -->
+        <ion-segment-button value="segment3">
           <ion-label>Gatos</ion-label>
         </ion-segment-button>
     </ion-segment>
@@ -139,10 +136,6 @@
               </ion-item>
               
               <ion-button id="meet-button" fill="clear" slot="end">Conhecer</ion-button>
-
-            <!-- <ion-select interface="popover">
-              <ion-select-option value="Filhote">Mais informações</ion-select-option>
-            </ion-select> -->
           </ion-item>  
        </ion-card-header>
        

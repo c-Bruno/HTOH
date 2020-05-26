@@ -16,16 +16,16 @@
     <img class="image-profile" src="../../assets/imgs/usuarioLogado.jpg">
   </div>
   
-  <ion-segment id="option">
-    <ion-segment-button value="adotar">
+  <ion-segment id="option" value="segment1" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="segment1">
       Para adoção
     </ion-segment-button>
-    <ion-segment-button value="adotados">
+    <ion-segment-button value="segment2">
       Adotados
     </ion-segment-button>
   </ion-segment>
 
-  <div class="grid">
+  <div class="grid" *ngIf="segment1">
     <div class="img_box" style="background-image: url('../../assets/imgs/Galeria_provisoria/1.jpg');"></div>
     <div class="img_box" style="background-image: url('../../assets/imgs/Galeria_provisoria/2.jpg');"></div>
     <div class="img_box" style="background-image: url('../../assets/imgs/Galeria_provisoria/3.jpg');"></div>
@@ -41,6 +41,14 @@
     <div class="img_box" style="background-image: url('../../assets/imgs/Galeria_provisoria/13.jpg');"></div>
     <div class="img_box" style="background-image: url('../../assets/imgs/Galeria_provisoria/14.jpg');"></div>
     <div class="img_box" style="background-image: url('../../assets/imgs/Galeria_provisoria/15.jpg');"></div>
+  </div>
+
+  <div class="grid" *ngIf="segment2">
+    <div class="img_box" style="background-image: url('../../assets/imgs/Galeria_provisoria/16.jpg');"></div>
+    <div class="img_box" style="background-image: url('../../assets/imgs/Galeria_provisoria/17.jpg');"></div>
+    <div class="img_box" style="background-image: url('../../assets/imgs/Galeria_provisoria/18.jpg');"></div>
+    <div class="img_box" style="background-image: url('../../assets/imgs/Galeria_provisoria/19.jpg');"></div>
+    <div class="img_box" style="background-image: url('../../assets/imgs/Galeria_provisoria/20.jpg');"></div>
   </div>
   
 </ion-content>

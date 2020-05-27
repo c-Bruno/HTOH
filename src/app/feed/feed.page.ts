@@ -17,11 +17,21 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
 export class FeedPage implements OnInit {
   @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
   public photo: string = ""; // foto
+  public isValid:boolean=true;
 
   segment1:boolean=true;
   segment2:boolean=false;
   segment3:boolean=false;
 
+  pets:boolean=true;
+  ongs:boolean=false;
+  wanted:boolean=true;
+
+  perdidos:boolean= true;
+  encontrados:boolean= false;
+
+
+  wanted_image = "../../assets/imgs/encontrados.jpg";
   animal_name = "Pipoca";
   animal_image = "../../assets/imgs/pipoca.png";
   animal_image2 = "../../assets/imgs/pipoca2.png";
@@ -147,6 +157,31 @@ export class FeedPage implements OnInit {
     }
 
     /* Alimentadores de informação do feed ===========================================================================================*/
+    
+    feedPets(){
+      this.pets= true;
+      this.ongs= false;
+      this.wanted= false;
+
+      this.isValid= true;
+    }
+
+    feedOngs(){
+      this.pets= false;
+      this.ongs= true;
+      this.wanted= false;
+
+      this.isValid= false;
+    }
+
+    feedWanted(){
+      this.pets= false;
+      this.ongs= false;
+      this.wanted= true;
+
+      this.isValid= false;
+    }
+        
     loadData(event){
       //Mantem o scroll da pagina sempre disponivel, carregando sempre um novo conteudo quando o usuario chega ao final da pagina
     // Para essa função é usado o array items, que vai conter a informação a ser carregada na tela, sempre de 10 em 10 items
@@ -193,6 +228,8 @@ export class FeedPage implements OnInit {
         this.segment3 = false;
 
         this.animal_image = "../../assets/imgs/3.jpg";
+        this.animal_image2 = "../../assets/imgs/3.jpg";
+        this.animal_image3 = "../../assets/imgs/3.jpg";
         this.animal_text = "Nessa aba esta sendo exibido os CACHORROS para adoção";
 
         this.loadData(event);
@@ -204,8 +241,31 @@ export class FeedPage implements OnInit {
         this.segment3 = true;
 
         this.animal_image = "../../assets/imgs/pipoca2.png";
+        this.animal_image2 = "../../assets/imgs/pipoca2.png";
+        this.animal_image3 = "../../assets/imgs/pipoca2.png";
         this.animal_text = "Nessa aba esta sendo exibido os GATOS para adoção";
 
+        this.loadData(event);
+      }
+    }
+
+    segmentChangedWanted(event){
+      var segment = event.target.value;
+      if(segment == "perdidos"){
+        this.segment1 = true;
+        this.segment2 = false;
+        this.segment3 = false;
+
+        this.wanted_image = "../../assets/imgs/encontrados.jpg";        
+        this.loadData(event);
+      }
+  
+      else if(segment == "encontrados"){
+        this.segment1 = false;
+        this.segment2 = true;
+        this.segment3 = false;
+
+        this.wanted_image = "../../assets/imgs/encontrados2.jpg";
         this.loadData(event);
       }
     }

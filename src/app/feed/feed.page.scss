@@ -1,20 +1,21 @@
 ion-content {
     --background: #E8EDF3;
-    --ion-toolbar-background: #1B2531; 
+}
+
+ion-toolbar{
+    --padding-top: 5%;
+    padding: 5%;
 }
 
 ion-item{
     padding-top: 5%;
 }
 
-ion-toolbar{
-    padding: 5%;
-}
-
 ion-segment ion-segment-button{
     font-weight: bold;
     font-size: 15px;
 }
+
 
 /*NOME==================================================================================================================*/
 #teste{
@@ -50,9 +51,8 @@ ion-segment ion-segment-button{
 }
 
 #feed-list{
-   /*  margin-right: 2%;
-    margin-left: 2%; */
     margin-top: 8%;
+    margin-bottom: -10%;
 }
 
 #back-button{
@@ -60,27 +60,25 @@ ion-segment ion-segment-button{
 }
 
 #filter-button{
-    margin-top: -16%;
-    width: 100%;
-
     position: absolute;
+    margin-left: -1%;
+    margin-top: -16%;
+    width: 101%;
 
     color: #817C7C;
-    background-color: #ffffff;
-   /*  box-shadow: 1px 2px 5px 1px #00000059; */
+    background-color: #ffffff
 }
 
 #options-button{
-    margin-top: 33%;
+    margin-top: 36%;
     margin-left: 10%;
     width: 80%;
-    
+
     background-color: #1B2531;
 }
 
 
 #info-card{
-    /* box-shadow: 1px 1px 11px 2px #00000059;  */
     border-radius: 0px; 
     background-color: #ffffff; 
     
@@ -135,7 +133,67 @@ ion-segment ion-segment-button{
     font-size: 13px;
 }
 
+
+#search{
+    margin-top: 20%;
+    margin-left: 10%;
+    width: 80%;
+
+    background: #7dbfcd;
+    border-radius: 3%;
+
+    --color: #ffffff;
+    --icon-color: #ffffff;
+}
+
+#image_ong{
+    border-radius: 5%;
+    width: 120px;
+    border: 0; 
+}
+
+#card_ong{
+    height: 150px;
+    box-shadow: 1px 2px 9px 0px #00000059;
+}
+
+#meet-button-ong{
+    font-weight: bold;
+    border-radius: 7%;
+    font-size: 15px;
+	
+	color: white;
+    position: absolute;
+    margin-top: -13%;
+    margin-left: 64%;
+    background-color: #7DBFCD;
+}
+
+#information{
+    font-weight: bold;
+    margin-top: -40%;
+
+    font-size: 18px;
+    font-weight: bold;    
+}
+
+#options-button_wanted{
+    margin-top: 20%;
+    margin-left: 10%;
+    width: 55%;
+    
+    background-color: #7DBFCD;
+}
+
+#date{
+    margin-bottom: 5%;
+}
+
 /*Classes==================================================================================================================*/
+.information{
+    margin-left: 40%;
+}
+
 .my-custom-menu{
     --width: 100;
     --height: 100%;
@@ -144,10 +202,6 @@ ion-segment ion-segment-button{
 .button-size{
     font-size: 180%;
 }
-
-/* .slide{
-    margin-top: -7%;
-} */
 
 .icon-size{
     font-size: medium;
@@ -166,4 +220,20 @@ ion-segment ion-segment-button{
   
 .icon-padding{
     margin-right: 5%;
+}
+
+.toolbar_true{
+    --ion-toolbar-background: #1B2531; 
+    --ion-color-step-150: #1B2531;
+    --color: #f5f5f5;
+}
+
+.toolbar_false{
+    --ion-toolbar-background: #e8edf3; 
+    --ion-color-step-150:#E8EDF3; 
+    --color: #1B2531;
+}
+
+.font_size_segment{
+    font-size: 14px;
 }

@@ -22,8 +22,6 @@ segment2:boolean=false;
     this.navCtrl.navigateRoot('/feed'); 
   }
 
-
-
   segmentChanged(event){
     var segment = event.target.value;
     if(segment == "segment1"){

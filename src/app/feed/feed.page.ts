@@ -159,6 +159,7 @@ export class FeedPage implements OnInit {
     /* Alimentadores de informação do feed ===========================================================================================*/
     
     feedPets(){
+
       this.pets= true;
       this.ongs= false;
       this.wanted= false;
@@ -205,8 +206,8 @@ export class FeedPage implements OnInit {
 
       setTimeout(() => {
         console.log('Pagina atualizada');
-        /* event.target.complete(); */
-      }, 1000);
+        event.target.complete(); 
+      }, 300);
     }
 
     segmentChanged(event){
@@ -216,7 +217,7 @@ export class FeedPage implements OnInit {
         this.segment2 = false;
         this.segment3 = false;
 
-        this.animal_image = "../../assets/imgs/pipoca.png";
+        this.animal_image3 = "../../assets/imgs/pipoca3.png";
         this.animal_text = "Oi, meu nome é Pipoca e estou a procura de um lar.Fui encontrado próximo a rodoviária após ter sido abandonado...";
         
         this.loadData(event);
@@ -227,8 +228,6 @@ export class FeedPage implements OnInit {
         this.segment2 = true;
         this.segment3 = false;
 
-        this.animal_image = "../../assets/imgs/3.jpg";
-        this.animal_image2 = "../../assets/imgs/3.jpg";
         this.animal_image3 = "../../assets/imgs/3.jpg";
         this.animal_text = "Nessa aba esta sendo exibido os CACHORROS para adoção";
 
@@ -240,8 +239,6 @@ export class FeedPage implements OnInit {
         this.segment2 = false;
         this.segment3 = true;
 
-        this.animal_image = "../../assets/imgs/pipoca2.png";
-        this.animal_image2 = "../../assets/imgs/pipoca2.png";
         this.animal_image3 = "../../assets/imgs/pipoca2.png";
         this.animal_text = "Nessa aba esta sendo exibido os GATOS para adoção";
 

@@ -1,8 +1,5 @@
-<ion-header [translucent]="true">
-    <ion-title>
-      
-    </ion-title>
-</ion-header>
+<!-- <ion-header [translucent]="true">
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -12,17 +9,17 @@
     <strong></strong>
       <p><ion-button class="btns efeito efeito-1" fill="clear" (click)="openLogin()">
         Login
-        <ion-icon id="login-icon" name="chevron-forward-outline"></ion-icon>
+        <ion-icon id="login-icon" name="chevron-forward-outline" (click)="openLogin()"></ion-icon>
       </ion-button></p>
 
-      <p><ion-button class="btns efeito efeito-1" fill="clear">
+      <p><ion-button class="btns efeito efeito-1" fill="clear" (click)="openExplore()">
         Explorar
-        <ion-icon id="explorar-icon" name="chevron-forward-outline"></ion-icon>
+        <ion-icon id="explorar-icon" name="chevron-forward-outline" (click)="openExplore()"></ion-icon>
       </ion-button></p>
 
-      <p><ion-button class="btns efeito efeito-1" fill="clear">
+      <p><ion-button class="btns efeito efeito-1" fill="clear" (click)="openSingUp()">
         Cadastre-se
-        <ion-icon id="cadastro-icon" name="chevron-forward-outline"></ion-icon>
+        <ion-icon id="cadastro-icon" name="chevron-forward-outline" (click)="openSingUp()"></ion-icon>
       </ion-button></p>
   </div>
 </ion-content>

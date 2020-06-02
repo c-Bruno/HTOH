@@ -16,11 +16,11 @@ export class HomePage {
     this.navCtrl.navigateRoot('/login');
   }
 
-  openSingUp(){
-
+  openExplore(){
+    this.navCtrl.navigateRoot('/feed');
   }
 
-  openExplore(){
-
+  openSingUp(){
+    this.navCtrl.navigateRoot('/register');
   }
 }

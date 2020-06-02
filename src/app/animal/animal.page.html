@@ -1,0 +1,57 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <ion-button fill="clear" (click)="back()">
+      <ion-icon name="chevron-back" slot="start"></ion-icon>
+      Voltar
+  </ion-button>
+
+  <ion-slides id="carrousel-animal" [options]="slideOpts">
+    <ion-slide class="slide">
+      <img src="{{animal_image}}">
+    </ion-slide>
+    <ion-slide class="slide">
+      <img src="{{animal_image2}}">
+    </ion-slide>
+    <ion-slide class="slide">
+      <img src="{{animal_image3}}">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-list id="animal_info">
+    PIPOCA
+   <ion-item id="text">
+        Oi, meu nome é Pipoca e estou a procura de um lar.Fui encontrado próximo a rodoviária após ter sido abandonado e agora estou a procura de um lar com donos que me dem muito amor e carinho.
+    </ion-item>
+    <!-- <ion-item id="color">
+      <ion-icon name="color-palette"></ion-icon>
+    </ion-item>
+    <ion-label id="color_label" class="label-location">Preto</ion-label>
+
+    <ion-item id="operation" class="button-location">
+      <ion-icon name="fitness"></ion-icon>
+    </ion-item>
+    <ion-label id="operation_label"  class="label-location">Castrado</ion-label>
+
+   <ion-item id="vaccine" class="button-location">
+      <ion-icon name="reader"></ion-icon>
+    </ion-item>
+    <ion-label id="vaccine_label"  class="label-location">Vacinado</ion-label>
+
+    <ion-item id="old" class="button-location">
+      <ion-icon name="hourglass"></ion-icon>
+   </ion-item>
+   <ion-label id="old_label"  class="label-location">Filhote</ion-label>
+
+   <ion-item>
+    <ion-item id="user-post">Publicado por...</ion-item>
+    <ion-avatar id="user-avatar" item-start slot="start">
+      <img src="../../assets/imgs/usuarioLogado.jpg">
+    </ion-avatar> 
+
+    <ion-item id="user-name">Alex Silva</ion-item>  
+    </ion-item> -->
+
+  </ion-list>
+</ion-content>

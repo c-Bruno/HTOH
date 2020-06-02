@@ -7,6 +7,7 @@ import { ActionSheetController } from '@ionic/angular';
 import { ViewChild } from '@angular/core';
 import { IonInfiniteScroll } from '@ionic/angular';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -16,7 +17,7 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
 })
 export class FeedPage implements OnInit {
   @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
-  public photo: string = ""; // foto
+  public photo: any = null; // foto
   public isValid:boolean=true;
 
   segment1:boolean=true;
@@ -45,7 +46,8 @@ export class FeedPage implements OnInit {
     public alertController: AlertController, 
     public navCtrl: NavController,
     public emailComposer: EmailComposer,
-    public actionSheetController: ActionSheetController
+    public actionSheetController: ActionSheetController,
+    private sn: DomSanitizer,
     ){ this.addMoreItems();}
 
 
@@ -106,7 +108,8 @@ export class FeedPage implements OnInit {
     /* Adicionar nova imagem ===========================================================================================*/
     takePicture(){
       // Permite que o usuario tire uma foto utilizando a camera do dispositivo
-    // Sendo acionada dependendo da escolha do usuario na ActionSheet
+      // Sendo acionada dependendo da escolha do usuario na ActionSheet
+
       this.photo = "";
 
       const options: CameraOptions = {
@@ -120,6 +123,7 @@ export class FeedPage implements OnInit {
       this.camera.getPicture(options).then((imageData) =>{
         let base65image = 'data:image/jpeg;base64,' + imageData;
         this.photo = base65image;
+        console.log(this.photo);
       
       }, (error) => {
         console.log(error);
@@ -132,8 +136,8 @@ export class FeedPage implements OnInit {
 
     getImage(){
       //Permitie que o usuario escolha uma foto da galeria/arquivos do dispositivos.
-    // Sendo acionada dependendo da escolha do usuario na ActionSheet
-      this.photo = "";
+      // Sendo acionada dependendo da escolha do usuario na ActionSheet
+      //this.photo = "";
 
       const options: CameraOptions = {
         quality: 100, 
@@ -144,8 +148,9 @@ export class FeedPage implements OnInit {
       }
 
       this.camera.getPicture(options).then((imageData) =>{
-        let base65image = 'data: image/jpeg;base64,' + imageData;
+        let base65image = this.sn.bypassSecurityTrustResourceUrl ('data: image/jpeg;base64,' + imageData); // responsavel por garantir que não vai ocorrer a injeção de scripts maliciosos no programa
         this.photo = base65image;
+        console.log(base65image);
 
       }, (error) => {
         console.log(error);

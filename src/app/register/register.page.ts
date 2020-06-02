@@ -14,15 +14,17 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
 
+
+  /* ROTAS ========================================================================================================================*/ 
   backSplash(){
     this.navCrtl.navigateRoot('/home');
   }
 
   registerOng(){
-    this.navCrtl.navigateRoot('/home')
+    this.navCrtl.navigateRoot('/register-ong');
   }
 
   registerUser(){
-    this.navCrtl.navigateRoot('/home');
+    this.navCrtl.navigateRoot('/register-user');
   }
 }

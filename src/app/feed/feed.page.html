@@ -46,8 +46,8 @@
           </ion-item>
 
           <ion-item>
-            <ion-icon name="information-circle" slot="start"></ion-icon>
-            <ion-label>Sobre Nós</ion-label>
+            <ion-icon name="information-circle" slot="start" (click)="openAbout()"></ion-icon>
+            <ion-label (click)="openAbout()">Sobre Nós</ion-label>
           </ion-item>
 
           <ion-item id="send-button" (click)="OpenEmailComposer()">

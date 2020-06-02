@@ -50,7 +50,6 @@ export class FeedPage implements OnInit {
     private sn: DomSanitizer,
     ){ this.addMoreItems();}
 
-
     slideOpts = {
       initialSlide: 0,
       speed: 10,
@@ -287,5 +286,9 @@ export class FeedPage implements OnInit {
 
     openAnimalInfo(){
       this.navCtrl.navigateRoot('/animal');
+    }
+
+    openAbout(){
+      this.navCtrl.navigateRoot('/about')
     }
 } 

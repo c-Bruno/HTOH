@@ -14,8 +14,7 @@ const routes: Routes = [
   { path: 'filters', loadChildren: () => import('./filters/filters.module').then( m => m.FiltersPageModule)},
   { path: 'profile', loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)},
   { path: 'animal', loadChildren: () => import('./animal/animal.module').then( m => m.AnimalPageModule)},
-
-  
+  { path: 'about', loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)},  
 ];
 
 @NgModule({

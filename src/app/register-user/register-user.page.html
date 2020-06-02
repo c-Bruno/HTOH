@@ -1,0 +1,114 @@
+<ion-header>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide id="ion-slide-1" style="background-color: blue">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-12 col-xs-12 text-center">
+            <div class="title-white">Preencha as informações a baixo para prepararmos tudo.</div>
+          </div>
+          <div class="col-md-12 col-xs-12">
+            <div class="title-white">Isso facilita muito o processo.</div>
+          </div>
+          <div class="col-md-12 col-xs-12">
+            <form action="/exemplo.js">
+              <!-- NOME -->
+              <div class="form-group">
+                <input class="input-group mb-3 input-group-prepend" type="text" class="form-control" placeholder="Nome"
+                  aria-label="Nome" aria-describedby="basic-addon1">
+              </div>
+              <!-- DATA DE NASCIMENTO -->
+              <div class="form-group">
+                <input class="input-group mb-3 input-group-prepend" type="date" class="form-control"
+                  value="Data de nascimento" placeholder="Data de nascimento" aria-label="Data de nascimento"
+                  aria-describedby="basic-addon1">
+              </div>
+              <!-- CPF -->
+              <div class="form-group">
+                <input class="input-group mb-3 input-group-prepend" type="text" class="form-control" placeholder="CPF"
+                  aria-label="CPF" aria-describedby="basic-addon1">
+              </div>
+              <!-- NÚMERO DE TELEFONE -->
+              <div class="form-group">
+                <input class="input-group mb-3 input-group-prepend" type="number" class="form-control"
+                  placeholder="Telefone" aria-label="Telefone" aria-describedby="basic-addon1">
+              </div>
+              <!-- BOTÃO -->
+              <div class="form-group">
+                <button type="button" class="botoes" class="btn btn-outline-light">Próximo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+      <ion-slide style="background-color: linear-gradient(0deg, white 60%,#7DBFCD 40%);">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-12 col-xs-12">
+              <!-- <img id="image" src="../../assets/imgs/login_user_1.jpg"> -->
+            </div>
+
+
+            
+            <div class="title-black">Quase acabando...</div>
+          <div class="col-md-12 col-xs-12">
+              <form action="/exemplo.js">
+                <!-- E-MAIL -->
+                <div class="form-group">
+                  <input class="input-group mb-3 input-group-prepend" type="text" class="form-control" placeholder="E-mail"
+                    aria-label="E-mail" aria-describedby="basic-addon1">
+                </div>
+                <!-- CONFIRMAR E-MAIL -->
+                <div class="form-group">
+                  <input class="input-group mb-3 input-group-prepend" type="text" class="form-control" placeholder="Confirmar e-mail"
+                    aria-label="Confirmar e-mail" aria-describedby="basic-addon1">
+                </div>
+                <!-- SENHA -->
+                <div class="form-group">
+                  <input class="input-group mb-3 input-group-prepend" type="password" class="form-control" placeholder="Senha"
+                    aria-label="Senha" aria-describedby="basic-addon1">
+                </div>
+                <!-- CONFIRMAR SENHA -->
+                <div class="form-group">
+                  <input class="input-group mb-3 input-group-prepend" type="password" class="form-control" placeholder="Confirmar senha"
+                    aria-label="Confirmar senha" aria-describedby="basic-addon1">
+                </div>
+                <!-- BOTÃO -->
+                <div class="form-group">
+                  <button type="submit" id="botao-azul" class="btn btn-outline-light">Próximo</button>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+
+<ion-slide style="color: white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-xs-12 text-center">
+        <div class="title-black">Muito obrigado pelas informações.</div>
+        <div class="col-md-12 col-xs-12">
+          <img src="../../assets/imgs/login_ong_2.jpg">
+        </div>
+        <!-- BOTÃO -->
+        <div class="form-group">
+          <button type="button" id="botao-verde" class="btn btn-outline-light">Finalizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-slide>
+
+
+
+
+
+
+  </ion-slides>
+</ion-content>

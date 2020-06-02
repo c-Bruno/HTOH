@@ -1,0 +1,239 @@
+ion-content {
+    --background: #E8EDF3;
+}
+
+ion-toolbar{
+    --padding-top: 5%;
+    padding: 5%;
+}
+
+ion-item{
+    padding-top: 5%;
+}
+
+ion-segment ion-segment-button{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+/*NOME==================================================================================================================*/
+#teste{
+    position: absolute;
+    margin-top: 80px;
+    background-color: red;
+}
+
+#side-menu{
+    background-color: #1B2531;
+}
+
+#header-side-menu{
+    background-color: #1B2531;
+}
+
+
+#image-profile{
+    width: 120px;
+    height: 120px;
+
+    margin-left: 32%;
+    margin-top: 25%;
+    margin-bottom: 21%;
+
+    background-color: transparent;
+    border-radius: 60px;
+}
+
+#carrousel-animal{
+    margin-top: 25%;
+    z-index: 1;
+}
+
+#feed-list{
+    margin-top: 8%;
+    margin-bottom: -10%;
+}
+
+#back-button{
+    margin-top: 45%;
+}
+
+#filter-button{
+    position: absolute;
+    margin-left: -1%;
+    margin-top: -16%;
+    width: 101%;
+
+    color: #817C7C;
+    background-color: #ffffff
+}
+
+#options-button{
+    margin-top: 36%;
+    margin-left: 10%;
+    width: 80%;
+
+    background-color: #1B2531;
+}
+
+
+#info-card{
+    border-radius: 0px; 
+    background-color: #ffffff; 
+    
+    height: 415px; 
+    margin-top: -327px;
+}
+
+#user-post{
+    margin-top: -30px;
+    margin-left: -8%;
+    color: #424B56;
+}
+
+#user-avatar{
+    width: 50px;
+    height: 50px;
+    margin-top: 2%;
+}
+
+#user-name{
+    color: black;
+
+    margin-left: -10%;
+    margin-top: -12%;
+}
+
+#user-location{
+    color: #a2a0a0;
+    margin-left: -65%;
+    margin-top: 12%;
+    font-size: 13px;
+}
+
+#meet-button{
+    color: #5f5d5d;
+    margin-right: -3%;
+    box-shadow: 0px 1px 1px 1px #00000059;
+}
+
+#post-time{
+    margin-left: 70%;
+    margin-top: 70%;
+    color: #9a9999;
+    font-size: 13px;
+}
+
+#animal-text{
+    color: #4c4c4c;
+    width: 114%;
+    margin-top: -8%;
+    margin-left: -4%;   
+    font-size: 13px;
+}
+
+
+#search{
+    margin-top: 20%;
+    margin-left: 10%;
+    width: 80%;
+
+    background: #7dbfcd;
+    border-radius: 3%;
+
+    --color: #ffffff;
+    --icon-color: #ffffff;
+}
+
+#image_ong{
+    border-radius: 5%;
+    width: 120px;
+    border: 0; 
+}
+
+#card_ong{
+    height: 150px;
+    box-shadow: 1px 2px 9px 0px #00000059;
+}
+
+#meet-button-ong{
+    font-weight: bold;
+    border-radius: 7%;
+    font-size: 15px;
+	
+	color: white;
+    position: absolute;
+    margin-top: -13%;
+    margin-left: 64%;
+    background-color: #7DBFCD;
+}
+
+#information{
+    font-weight: bold;
+    margin-top: -40%;
+
+    font-size: 18px;
+    font-weight: bold;    
+}
+
+#options-button_wanted{
+    margin-top: 20%;
+    margin-left: 10%;
+    width: 55%;
+    
+    background-color: #7DBFCD;
+}
+
+#date{
+    margin-bottom: 5%;
+}
+
+/*Classes==================================================================================================================*/
+.information{
+    margin-left: 40%;
+}
+
+.my-custom-menu{
+    --width: 100;
+    --height: 100%;
+}
+
+.button-size{
+    font-size: 180%;
+}
+
+.icon-size{
+    font-size: medium;
+}
+
+.efeito{
+    background-color: #ffffff;
+    border: solid 2px #989898;
+    color: #989898;
+    
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    font-size: 15px;
+  }
+  
+.icon-padding{
+    margin-right: 5%;
+}
+
+.toolbar_true{
+    --ion-toolbar-background: #1B2531; 
+    --ion-color-step-150: #1B2531;
+    --color: #f5f5f5;
+}
+
+.toolbar_false{
+    --ion-toolbar-background: #e8edf3; 
+    --ion-color-step-150:#E8EDF3; 
+    --color: #1B2531;
+}
+
+.font_size_segment{
+    font-size: 14px;
+}

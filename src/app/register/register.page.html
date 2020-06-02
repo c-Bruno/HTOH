@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-title>
+      
+    </ion-title>
+</ion-header>
+
+<ion-content>
+    <ion-button fill="clear" (click)="backSplash()">
+        <ion-icon id="back-button" name="chevron-back"></ion-icon></ion-button>
+
+<ion-row>
+    <p id="p1" class="font">
+        Que tal nos conhecermos</p>    
+    <p id="p2" class="font">
+        Qual perfil melhor<br>
+        se enquadra com você ?</p>
+</ion-row>
+
+<div>
+    <ion-row>
+        <ion-button fill="clear" class="btn" (click)="registerOng()"> </ion-button>
+        <img id="ong-image" src="../../assets/icon/register_ong.png" class="format-image" (click)="registerOng()">
+    </ion-row>
+
+    <p id="ong" class="font">
+        ONG</p>
+
+    <ion-row>
+        <ion-button fill="clear" class="btn" (click)="registerUser()"> </ion-button>
+        <img id="user-image" src="../../assets/icon/register_user.png" class="format-image" (click)="registerUser()">
+    </ion-row>
+
+    <p id="user" class="font">
+        Usuario<br>Comum</p>
+</div>
+
+
+</ion-content>

@@ -41,6 +41,7 @@ ion-input{
     width: 295px;
     height: 60px;   
 
+    font-weight: bold;
     color: white;
     background-color:  #7DBFCD;
     box-shadow: 1px 1px 11px 2px #00000059;
@@ -117,6 +118,10 @@ ion-input{
 
     margin-left: 320px;
     margin-top: 135px;
+}
+
+.login-input-1{
+    box-shadow: 3px 3px 0px 1px #00000059;;
 }
 
 .title{

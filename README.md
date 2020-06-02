@@ -11,3 +11,4 @@ Para desenvolvimento do projeto, necessario:
 - nodejs (https://nodejs.org/en/)
 - ionic (rodar no cmd: npm install -g @ionic/cli e npm install -g cordova) 
 - angular para versão 9.0.4 (ng update @angular/cli --force)
+

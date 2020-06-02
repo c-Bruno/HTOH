@@ -1,6 +1,4 @@
 # HTOH
-H![HTOH]
-
 > Happy to Help
 
 O objetivo do sistema a ser desenvolvido é a criação de uma plataforma que possui como propósito

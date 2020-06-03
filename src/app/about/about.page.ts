@@ -8,12 +8,15 @@ import { NavController } from '@ionic/angular';
 })
 export class AboutPage implements OnInit {
 
-  constructor(public newCtrl: NavController)
-  { 
-    
-  }
+  constructor(
+    public navCtrl: NavController,
+  ){ }
 
   ngOnInit() {
+  }
+
+  backFeed(){// Redirecionamento para a pagina Home
+    this.navCtrl.navigateRoot('/feed'); 
   }
 
 }

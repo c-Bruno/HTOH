@@ -1,45 +1,53 @@
-ion-header
-{
+ion-header{
     text-align: center;
 }
 
-h3
-{
+ion-toolbar{
+    --background: #C0DE6C;
+    --ion-color-step-150: transparent;
+    --color: #262626;
+}
+
+table{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+h3{
     text-align: center;
     color: white;
 }
 
-.subtitulo
-{
+.subtitulo{
+    font-weight: bold;
     text-align: left;
     color: white;
+    margin-bottom: 10%;
+    margin-top: 10%;  
 }
 
-#subtitulo_topo
-{
+#subtitulo_topo{
     text-align: center;
     color: white;
 }
 
-td
-{
+td{
     text-align: center;
 }
 
-p
-{
+p{
     text-align: justify;
     color: white;
 }
 
-ion-content
-{
+ion-content{
     --background: #7DBFCD;
     padding: 0% 10% 0% 10%;
 }
 
-.image
-{
+.image{
     border-radius: 50%;
     max-width: 100%;
     height: auto;

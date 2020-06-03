@@ -1,0 +1,44 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  
+  <div>
+    <ion-list id="big-circle"></ion-list>
+    <ion-list id="medium-circle"></ion-list>
+    <ion-list id="small-circle"></ion-list>
+
+    <img id="image-geo" src="../../assets/icon/remember_geo.png">
+    <img id="image-cpu" src="../../assets/icon/remember_cpu.png">
+    <img id="image-quest" src="../../assets/icon/remember_quest.png">
+  </div>
+
+  <ion-button fill="clear" (click)="backLogin()">
+    <ion-icon id="back-button" name="chevron-back"></ion-icon></ion-button>
+
+  <ion-row > 
+    <p class="title">
+      Esqueceu sua senha ?
+    </p>
+  </ion-row>
+
+  <ion-row > 
+    <p class="stitle">
+      Entre com o seu e-mail para receber instruções de redefinição
+    </p>
+  </ion-row>
+
+  <div>
+    <ion-item class="login-input-1">
+      <ion-icon id="user-icon" name="mail-outline"></ion-icon>
+      <ion-input [(ngModel)]="emailText" placeholder="E-mail" type="text" clearInput></ion-input>
+  </ion-item>
+
+  
+  <ion-button id="send-button" fill="clear" (click)="Alert()">
+    Enviar e-mail
+  </ion-button>  
+   
+  </div>
+
+</ion-content>

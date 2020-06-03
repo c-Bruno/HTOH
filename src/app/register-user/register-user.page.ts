@@ -9,15 +9,11 @@ export class RegisterUserPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
-}
-
-export class SlideExample {
   slideOpts = {
-    initialSlide: 1,
+    initialSlide: 0,
     speed: 400
   };
-  constructor(){}
+
+  ngOnInit() {
+  }
 }

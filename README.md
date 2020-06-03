@@ -1,5 +1,5 @@
 # HTOH
-Happy To Help
+> Happy to Help
 
 O objetivo do sistema a ser desenvolvido é a criação de uma plataforma que possui como propósito
 principal a ajuda para animais, tanto os domésticos quando os que não possuem um lar para viver.
@@ -10,3 +10,5 @@ Configuração
 Para desenvolvimento do projeto, necessario:
 - nodejs (https://nodejs.org/en/)
 - ionic (rodar no cmd: npm install -g @ionic/cli e npm install -g cordova) 
+- angular para versão 9.0.4 (ng update @angular/cli --force)
+

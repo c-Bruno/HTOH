@@ -155,7 +155,7 @@
 
 <!-- INICIO da composição do menu de ONGS =================================================================================================================== -->
 <div *ngIf="ongs" >
-    <ion-searchbar id="search" placeholder="ong..." showCancelButton="focus" cancelButtonText=""></ion-searchbar>
+    <ion-searchbar id="search" placeholder="Procurando uma ong?" showCancelButton="focus" cancelButtonText="" color="light"></ion-searchbar>
 
     <ion-list pager="true" id='feed-list' *ngFor="let item of items">
 
@@ -213,6 +213,6 @@
 </ion-infinite-scroll>
 
 
-    <p id='teste' aling="center"><img src="{{ photo }}"></p>
+<p id='teste' aling="center"><img src="{{ photo }}"></p>
     
 </ion-content>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Camera, CameraOptions}  from '@ionic-native/camera/ngx';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, NavController, MenuController } from '@ionic/angular';
 import { ActionSheetController } from '@ionic/angular';
 
 import { ViewChild } from '@angular/core';
@@ -26,7 +26,7 @@ export class FeedPage implements OnInit {
 
   pets:boolean=true;
   ongs:boolean=false;
-  wanted:boolean=true;
+  wanted:boolean=false;
 
   perdidos:boolean= true;
   encontrados:boolean= false;
@@ -47,6 +47,7 @@ export class FeedPage implements OnInit {
     public navCtrl: NavController,
     public emailComposer: EmailComposer,
     public actionSheetController: ActionSheetController,
+    public menuCtrl: MenuController,
     private sn: DomSanitizer,
     ){ this.addMoreItems();}
 
@@ -58,8 +59,11 @@ export class FeedPage implements OnInit {
 
     ngOnInit() {
     }
-    
-  
+
+    closeMenu() {
+      this.menuCtrl.close();//Fecha o menu lateral
+    }
+      
     async ActionSheet() { 
     //Solicita ao usuario a seleção de como a imagem deve ser escolhida.
     // Sendo possivel a escolha através do getImage e do takePicture
@@ -167,24 +171,27 @@ export class FeedPage implements OnInit {
       this.pets= true;
       this.ongs= false;
       this.wanted= false;
-
       this.isValid= true;
+
+      this.closeMenu();
     }
 
     feedOngs(){
       this.pets= false;
       this.ongs= true;
       this.wanted= false;
-
       this.isValid= false;
+
+      this.closeMenu();
     }
 
     feedWanted(){
       this.pets= false;
       this.ongs= false;
       this.wanted= true;
-
       this.isValid= false;
+
+      this.closeMenu();
     }
         
     loadData(event){

@@ -16,7 +16,6 @@ ion-segment ion-segment-button{
     font-size: 15px;
 }
 
-
 /*NOME==================================================================================================================*/
 #teste{
     position: absolute;
@@ -136,13 +135,8 @@ ion-segment ion-segment-button{
 
 #search{
     margin-top: 20%;
-    margin-left: 10%;
-    width: 80%;
-
-    background: #7dbfcd;
-    border-radius: 3%;
-
-    --color: #ffffff;
+    margin-left: 5%;
+    width: 90%;
     --icon-color: #ffffff;
 }
 
@@ -155,6 +149,7 @@ ion-segment ion-segment-button{
 #card_ong{
     height: 150px;
     box-shadow: 1px 2px 9px 0px #00000059;
+    background-color: #ffffff;
 }
 
 #meet-button-ong{

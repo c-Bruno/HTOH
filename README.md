@@ -3,7 +3,7 @@
 
 ## Project Setup
 - nodejs (https://nodejs.org/en/)
-- ionic (rodar no cmd: npm install -g @ionic/cli e npm install -g cordova) 
+- ionic (run "npm install -g @ionic/cli" and "npm install -g cordova") 
 - angular 9.1.4 (ng update @angular/cli --force)
 
 ## Branching

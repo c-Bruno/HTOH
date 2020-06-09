@@ -110,8 +110,8 @@ export class FeedPage implements OnInit {
 
     /* Adicionar nova imagem ===========================================================================================*/
     takePicture(){
-      // Permite que o usuario tire uma foto utilizando a camera do dispositivo
-      // Sendo acionada dependendo da escolha do usuario na ActionSheet
+      /*Permite que o usuario tire uma foto utilizando a camera do dispositivo
+      Sendo acionada dependendo da escolha do usuario na ActionSheet */
 
       this.photo = "";
 
@@ -138,9 +138,9 @@ export class FeedPage implements OnInit {
     }
 
     getImage(){
-      //Permitie que o usuario escolha uma foto da galeria/arquivos do dispositivos.
-      // Sendo acionada dependendo da escolha do usuario na ActionSheet
-      //this.photo = "";
+      /* Permitie que o usuario escolha uma foto da galeria/arquivos do dispositivos.
+      Sendo acionada dependendo da escolha do usuario na ActionSheet
+      this.photo = ""; */
 
       const options: CameraOptions = {
         quality: 100, 

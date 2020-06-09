@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterOngPage implements OnInit {
 
   constructor() { }
+  
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400
+  };
 
   ngOnInit() {
   }

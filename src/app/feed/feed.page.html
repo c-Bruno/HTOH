@@ -128,10 +128,10 @@
           
           <ion-item id="user-post">
             <ion-avatar id="user-avatar" item-start slot="start" (click)="openProfile()">
-              <img src="../../assets/imgs/usuarioLogado.jpg">
+              <img src="{{ image_user }}">
             </ion-avatar>
             
-              <ion-item id="user-name" (click)="openProfile()">Alex Silva</ion-item>
+              <ion-item id="user-name" (click)="openProfile()">{{ user_name }}</ion-item>
               <ion-item id="user-location" (click)="openProfile()">
                 <ion-icon class="icon-padding" name="earth"></ion-icon>
                 Campinas 

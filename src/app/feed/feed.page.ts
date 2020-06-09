@@ -31,7 +31,7 @@ export class FeedPage implements OnInit {
   perdidos:boolean= true;
   encontrados:boolean= false;
 
-
+ /*Dados provisoriso =====================================================================================================================*/
   wanted_image = "../../assets/imgs/encontrados.jpg";
   animal_name = "Pipoca";
   animal_image = "../../assets/imgs/pipoca.png";
@@ -40,6 +40,12 @@ export class FeedPage implements OnInit {
   animal_text = "Oi, meu nome é Pipoca e estou a procura de um lar.Fui encontrado próximo a rodoviária após ter sido abandonado...";
 
   items = [this.animal_name, this.animal_image, this.animal_text];
+
+
+  image_user = "../../assets/imgs/usuarioLogado.jpg";
+  user_name = "Alex Silva";
+
+  /*======================================================================================================================================*/
 
   constructor(
     private camera: Camera, 
@@ -167,7 +173,7 @@ export class FeedPage implements OnInit {
     /* Alimentadores de informação do feed ===========================================================================================*/
     
     feedPets(){
-
+      /*reponsavel por atualizar o feed com informações dos animais*/
       this.pets= true;
       this.ongs= false;
       this.wanted= false;
@@ -177,6 +183,7 @@ export class FeedPage implements OnInit {
     }
 
     feedOngs(){
+       /*reponsavel por atualizar o feed com informações das ONGs*/
       this.pets= false;
       this.ongs= true;
       this.wanted= false;
@@ -186,6 +193,7 @@ export class FeedPage implements OnInit {
     }
 
     feedWanted(){
+      /*reponsavel por atualizar o feed com informações dos animais que foram perdidos e encontrados*/
       this.pets= false;
       this.ongs= false;
       this.wanted= true;
@@ -195,8 +203,8 @@ export class FeedPage implements OnInit {
     }
         
     loadData(event){
-      //Mantem o scroll da pagina sempre disponivel, carregando sempre um novo conteudo quando o usuario chega ao final da pagina
-    // Para essa função é usado o array items, que vai conter a informação a ser carregada na tela, sempre de 10 em 10 items
+    /*Mantem o scroll da pagina sempre disponivel, carregando sempre um novo conteudo quando o usuario chega ao final da pagina
+    Para essa função é usado o array items, que vai conter a informação a ser carregada na tela, sempre de 10 em 10 items */
       setTimeout(() => {
         console.log('Concluido');     
         this.addMoreItems();     
@@ -217,7 +225,14 @@ export class FeedPage implements OnInit {
 
       setTimeout(() => {
         console.log('Pagina atualizada');
-        event.target.complete(); 
+
+        this.image_user = "../../assets/imgs/usuarioLogado2.jpg";
+        this.user_name = "Elizabete";
+
+        this.animal_image3 = "../../assets/imgs/refresh.png";
+        this.animal_text = "Sebastião é um cachorro muito amavel e docil. Um companheiro para qualquer hora";
+        event.target.complete();
+        /* this.addMoreItems(); */
       }, 300);
     }
 
@@ -227,6 +242,9 @@ export class FeedPage implements OnInit {
         this.segment1 = true;
         this.segment2 = false;
         this.segment3 = false;
+
+        this.image_user = "../../assets/imgs/usuarioLogado.jpg";
+        this.user_name = "Alex Silva";
 
         this.animal_image3 = "../../assets/imgs/pipoca3.png";
         this.animal_text = "Oi, meu nome é Pipoca e estou a procura de um lar.Fui encontrado próximo a rodoviária após ter sido abandonado...";
@@ -239,6 +257,9 @@ export class FeedPage implements OnInit {
         this.segment2 = true;
         this.segment3 = false;
 
+        this.image_user = "../../assets/imgs/usuarioLogado3.jpg";
+        this.user_name = "Anderson";
+
         this.animal_image3 = "../../assets/imgs/3.jpg";
         this.animal_text = "Nessa aba esta sendo exibido os CACHORROS para adoção";
 
@@ -249,6 +270,9 @@ export class FeedPage implements OnInit {
         this.segment1 = false;
         this.segment2 = false;
         this.segment3 = true;
+
+        this.image_user = "../../assets/imgs/usuarioLogado4.jpg";
+        this.user_name = "Jefferson";
 
         this.animal_image3 = "../../assets/imgs/pipoca2.png";
         this.animal_text = "Nessa aba esta sendo exibido os GATOS para adoção";

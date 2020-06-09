@@ -33,6 +33,7 @@
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
     "cordova-android": "^8.1.0",
+    "cordova-browser": "^6.0.0",
     "cordova-plugin-camera": "^4.1.0",
     "cordova-plugin-file": "^6.0.2",
     "cordova-plugin-inappbrowser": "^3.2.0",
@@ -57,6 +58,12 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-ionic-keyboard": "^2.0.5",
+    "cordova-plugin-ionic-webview": "^4.0.0",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -67,13 +74,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.8.3",
-    "cordova-plugin-whitelist": "1.3.3",
-    "cordova-plugin-statusbar": "2.4.2",
-    "cordova-plugin-device": "2.0.2",
-    "cordova-plugin-splashscreen": "5.0.2",
-    "cordova-plugin-ionic-webview": "^4.0.0",
-    "cordova-plugin-ionic-keyboard": "^2.0.5"
+    "typescript": "~3.8.3"
   },
   "description": "An Ionic project",
   "cordova": {
@@ -93,7 +94,8 @@
       "cordova-support-google-services": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "browser"
     ]
   }
 }

@@ -1,20 +1,21 @@
-#image
+.image
 {
-    background-color: #C0DE6C;
-    border-radius: 50%;
     max-width: 50%;
     height: auto;
+    align-items: center;
 }
 
-// #body
-// {
-//     background-color: #7DBFCD;
-// }
+.little-letters
+{
+    color: white;
+    font-size: 0.9em;
+}
 
-// #ion-slide-2
-// {
-//     background-color: linear-gradient(0deg, white 60%,#7DBFCD 40%);
-// }
+.little-little-letters
+{
+    color: white;
+    font-size: 0.6em;
+}
 
 .btn-outline-primary
 {
@@ -32,11 +33,6 @@
 .title-white
 {
     color: white;
-}
-
-.title-black
-{
-    color: black;
 }
 
 .botao-azul

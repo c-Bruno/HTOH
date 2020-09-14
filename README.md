@@ -4,7 +4,7 @@
   <img src="https://github.com/caduopm/PIE/blob/master/ProjetoIntegradoE/app_htoh/static/images/Icons/logo_htoh_green.fw.png" alt="HTOH" width="120">
 <br>
 <br>
-# Happy to Help
+## Happy to Help
 </h1>
 
 

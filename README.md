@@ -2,7 +2,7 @@
 <img src="https://github.com/caduopm/PIE/blob/master/ProjetoIntegradoE/app_htoh/static/images/Icons/logo_htoh_green.fw.png" hegth="230" width="490">
 
 ## Project Setup
-- nodejs (https://nodejs.org/en/)
+💹 nodejs (https://nodejs.org/en/)
 - ionic (run "npm install -g @ionic/cli" and "npm install -g cordova") 
 - angular 9.1.4 (ng update @angular/cli --force)
 

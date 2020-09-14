@@ -1,3 +1,4 @@
+<img src="https://github.com/caduopm/PIE/blob/master/ProjetoIntegradoE/app_htoh/static/images/Icons/logo_htoh_green.fw.png" hegth="60" width="60" align='center'>
 # Happy to Help
 
 > O objetivo do sistema desenvolvido é a criação de uma plataforma que possui como propósito
@@ -5,7 +6,7 @@ principal a ajuda para animais, tanto os domésticos quando os que não possuem 
 Abrangendo toda classe de animais, cachorros e gatos, dentre os mais comuns, dentre outros. Um
 de nossos intuitos é possibilitar uma conexão ideal para que pessoas possam adotar estes animais.
 
-<img src="https://github.com/caduopm/PIE/blob/master/ProjetoIntegradoE/app_htoh/static/images/Icons/logo_htoh_green.fw.png" hegth="50" width="50">
+
 
 ## Features
 - 💹 Nodejs

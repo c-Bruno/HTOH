@@ -1,5 +1,12 @@
-<img src="https://github.com/caduopm/PIE/blob/master/ProjetoIntegradoE/app_htoh/static/images/Icons/logo_htoh_green.fw.png" hegth="60" width="60" align='center'>
+
+<h1 align="center">
+<br>
+  <img src="https://github.com/caduopm/PIE/blob/master/ProjetoIntegradoE/app_htoh/static/images/Icons/logo_htoh_green.fw.png" alt="HTOH" width="120">
+<br>
+<br>
 # Happy to Help
+</h1>
+
 
 > O objetivo do sistema desenvolvido é a criação de uma plataforma que possui como propósito
 principal a ajuda para animais, tanto os domésticos quando os que não possuem um lar para viver.

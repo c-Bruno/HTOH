@@ -1,0 +1,105 @@
+ion-content {
+    --background: #ffffff; 
+}
+
+ion-segment ion-segment-button{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.header{
+    background-color: #7DBFCD;
+    height: 70px;
+    padding-top: 1px;
+}
+
+.header h2{
+    color: grey;
+    font-weight: bold;
+    padding-left: 5%;
+}
+
+h2 {
+    margin-top: 18px;
+    font-size: 19px;
+}
+
+h1 {
+    font-size: 17px;
+    color: grey;
+}
+
+h1 ion-icon{
+    padding-left: 5%;
+    padding-right: 2%;
+}
+
+.image-profile{
+    box-shadow: 0px -2px 1px 5px #ffffff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-top: -10%;
+    margin-left: 65%;
+}
+
+.info_box {
+    display: flex;
+}
+
+.data_box {
+    margin: 4px 36px 7px 15px;
+    text-align: center;
+}
+
+.data_box b{
+    font-size: 13px;
+    color: black;
+}
+
+.data_box p{
+    margin: 2px;
+    font-size: 12px;
+    color: grey;
+    font-weight: 500;
+}
+
+.text_button {
+    margin-left: 10px;
+    text-transform: initial;
+    --padding-start: 17px;
+    --padding-end: 17px;
+}
+
+.icon_button {
+    margin-left: 10px;
+    --padding-start: 7px;
+    --padding-end: 7px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img_box {
+    border: 1px solid transparent;
+    width: 33.3%;
+    padding-bottom: 31%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#back-button{
+    float: left;
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    color: white;
+}
+
+#option{
+    background-color: #7DBFCD;
+    border-radius: 0px;
+    margin-top: 115px;
+}

@@ -1,9 +1,51 @@
 <ion-header>
     <ion-title> 
-
+        
     </ion-title>
 </ion-header>
 
 <ion-content>
+    <ion-button fill="clear" (click)="backSplash()">
+    <ion-icon id="back-button" name="chevron-back"></ion-icon></ion-button>
 
+    <ion-list id="circulo-amarelo-1">
+    </ion-list>
+
+    <ion-list id="circulo-amarelo-2">
+    </ion-list>
+
+    <ion-list id="circulo-amarelo-3">
+    </ion-list>
+
+    <div>
+        <ion-row>
+            <ion-col>
+            <ion-list id="caixa-branca">
+    
+                <ion-item class="login-input-1" [ngClass]=" isValid ? 'border-valid' : 'border-invalid'" >
+                    <ion-icon id="user-icon" name="person-sharp"></ion-icon>
+                    <ion-input [(ngModel)]="userText" id="user-input" placeholder="E-mail" type="text" (ionInput)="busca()" clearInput></ion-input>
+                </ion-item>
+    
+                <ion-item [ngClass]=" isValid ? 'border-valid' : 'border-invalid'">
+                    <ion-icon id="lock-icon" name="lock-open"></ion-icon>
+                    <ion-input *ngIf="!viewPassword" [(ngModel)]="passText" id="pass-input" placeholder="Senha" type="password" (ionInput)="busca()" clearInput></ion-input>
+                    <ion-input *ngIf="viewPassword" [(ngModel)]="passText" id="pass-input" placeholder="Senha" type="text" (ionInput)="busca()" clearInput></ion-input>
+                    <ion-icon *ngIf="!viewPassword" name="eye" (click)="viewPassword = !viewPassword"></ion-icon>
+                    <ion-icon *ngIf="viewPassword" name="eye-off" (click)="viewPassword = !viewPassword"></ion-icon>
+                </ion-item>
+
+                <button id="remember-button" ion-button fill="clear" (click)="rememberButton()">Esqueceu sua senha?</button>
+
+                <ion-row>
+                    <ion-col>
+                        <button ion-button fill="clear" class="login-button-fundo" (click)="validate()"></button>
+                        <button ion-button class="login-button" (click)="validate()">Entrar</button>
+                    </ion-col>
+                </ion-row>
+                
+            </ion-list>
+            </ion-col>
+        </ion-row>
+    </div>
 </ion-content>

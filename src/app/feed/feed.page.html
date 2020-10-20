@@ -1,0 +1,218 @@
+<ion-header>
+    <ion-title>
+
+    </ion-title>
+</ion-header>
+
+<ion-content>
+<!-- Refresh da tela ==================================================================================================================== -->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content style="background-color: #1B2531"
+      pullingIcon="paw"
+      refreshingSpinner="circles">
+    </ion-refresher-content>
+  </ion-refresher>
+
+<!-- Composição do menu lateral ========================================================================================================================================= -->
+    <ion-menu side="start" content-id="main-content" >
+      <!--TAG com o cabeçalho do menu==================================================================================================== -->
+      <ion-header id="header-side-menu">      
+          <ion-title></ion-title>
+        <img id="image-profile" src="../../assets/icon/icons_default_user/Perfil_1.jpg ">
+      </ion-header>
+
+      <ion-content>
+        <ion-list id='side-menu'>
+          <!-- Composição do side menu -->
+
+          <ion-item>
+            <ion-icon name="person-circle-outline" slot="start" (click)="openProfile()"></ion-icon>
+            <ion-label (click)="openProfile()">Perfil</ion-label>
+          </ion-item>
+
+          <ion-item value="pet">
+            <ion-icon name="paw" slot="start" (click)="feedPets()"></ion-icon>
+            <ion-label (click)="feedPets()">Pets</ion-label>
+          </ion-item>
+
+          <ion-item value="ong">
+            <ion-icon name="bandage" slot="start" (click)="feedOngs()"></ion-icon>
+            <ion-label (click)="feedOngs()">ONGs</ion-label>
+          </ion-item>
+
+          <ion-item value="wanted">
+            <ion-icon name="search-circle" slot="start" (click)="feedWanted()"></ion-icon>
+            <ion-label (click)="feedWanted()">Perdidos</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="information-circle" slot="start" (click)="openAbout()"></ion-icon>
+            <ion-label (click)="openAbout()">Sobre Nós</ion-label>
+          </ion-item>
+
+          <ion-item id="send-button" (click)="OpenEmailComposer()">
+            <ion-icon name="chatbox" slot="start"></ion-icon>
+            <ion-label>Fale conosco</ion-label>
+          </ion-item>
+
+          <ion-item id="back-button" (click)="backSplash()">
+            <ion-icon name="arrow-undo-circle" slot="start"></ion-icon>
+            <ion-label>Sair</ion-label>
+          </ion-item>
+
+          
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+<!-- Tollbar + botões de filtro ========================================================================================================= -->
+    <div class="ion-page" id="main-content">
+      <ion-header >
+        <ion-toolbar [ngClass]=" isValid ? 'toolbar_true' : 'toolbar_false'">
+
+          <ion-buttons  slot="start">
+            <ion-menu-button [ngClass]=" isValid ? 'toolbar_true' : 'toolbar_false'"></ion-menu-button>
+          </ion-buttons>
+
+          <ion-title></ion-title>
+
+          <ion-buttons  slot="end" *ngIf="pets">
+            <ion-icon id="image-add" name="images" class="button-size" (click)="ActionSheet()"></ion-icon>
+          </ion-buttons>
+
+        </ion-toolbar>
+      </ion-header>
+    </div>
+
+
+
+<!-- INICIO da composição do menu de PETS =================================================================================================================== -->
+<div *ngIf="pets">
+      <ion-button id="filter-button" fill="clear" (click)="openFilters()">
+       <ion-icon name="color-filter" slot="start"></ion-icon>
+        Filtros personalizado
+        <ion-icon></ion-icon>
+      </ion-button>
+
+      <ion-segment id="options-button" scrollable value="segment1" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="segment1">
+          <ion-label>Todos</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="segment2">
+          <ion-label>Cachorros</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="segment3">
+          <ion-label>Gatos</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+    
+<!--Composição do card de informação do animal com scroll infinito ======================================================================================= -->
+   <ion-list pager="true" id='feed-list' *ngFor="let item of items">
+
+    <ion-slides id="carrousel-animal" [options]="slideOpts">
+      <ion-slide class="slide">
+        <img src="{{animal_image3}}">
+      </ion-slide>
+      <ion-slide class="slide">
+        <img src="{{animal_image2}}">
+      </ion-slide>
+      <ion-slide class="slide">
+        <img src="{{animal_image}}">
+      </ion-slide>
+    </ion-slides>
+    
+      <ion-card id="info-card">
+        <ion-card-header>
+          
+          <ion-item id="user-post">
+            <ion-avatar id="user-avatar" item-start slot="start" (click)="openProfile()">
+              <img src="{{ image_user }}">
+            </ion-avatar>
+            
+              <ion-item id="user-name" (click)="openProfile()">{{ user_name }}</ion-item>
+              <ion-item id="user-location" (click)="openProfile()">
+                <ion-icon class="icon-padding" name="earth"></ion-icon>
+                Campinas 
+              </ion-item>
+              
+              <ion-button id="meet-button" fill="clear" slot="end" (click)="openAnimalInfo()">Conhecer</ion-button>
+          </ion-item>  
+       </ion-card-header>
+       
+
+       <ion-card-content>
+          <ion-item id="post-time">2h atrás</ion-item>
+          <ion-item id="animal-text"> {{animal_text}}</ion-item>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+</div>
+<!-- FIM da composição do menu de PETS ====================================================================================================================== -->
+
+
+
+<!-- INICIO da composição do menu de ONGS =================================================================================================================== -->
+<div *ngIf="ongs" >
+    <ion-searchbar id="search" placeholder="Procurando uma ong?" showCancelButton="focus" cancelButtonText="" color="light"></ion-searchbar>
+
+    <ion-list pager="true" id='feed-list' *ngFor="let item of items">
+
+        <ion-card id="card_ong">         
+          <img id="image_ong" src="../../assets/imgs/usuarioLogado.jpg">
+          <ion-row class="information" id="information"><ion-icon slot="start" name="call-sharp"></ion-icon>Alex Silva</ion-row>
+
+          <ion-row class="information">alexandrade@gmail.com</ion-row>
+          <ion-row class="information">(19) 85269-4025</ion-row>
+        </ion-card>
+        <ion-button id="meet-button-ong" fill="clear" (click)="openProfile()">Conhecer</ion-button>
+
+      </ion-list>
+</div>
+<!-- FIM da composição do menu de ONGS ====================================================================================================================== -->
+
+
+
+<!-- INICIO da composição do menu de Perdidos =============================================================================================================== -->
+<div *ngIf="wanted" >
+    <ion-segment id="options-button_wanted" scrollable value="perdidos" (ionChange)="segmentChangedWanted($event)">
+      <ion-segment-button value="perdidos">
+        <ion-label class="font_size_segment">Perdidos</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="encontrados">
+        <ion-label class="font_size_segment">Encontrados</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+  <ion-list pager="true" id='feed-list' *ngFor="let item of items">
+
+      <ion-card id="card_ong">         
+        <img id="image_ong" src="{{wanted_image}}">
+        <ion-row class="information" id="information"><ion-icon slot="start" name="call-sharp"></ion-icon>Encontrado:</ion-row>
+        <ion-row class="information" id="date">14/05/2020</ion-row>
+
+        <ion-row class="information" style="font-weight: bold;">Caracteristicas:</ion-row>
+        <ion-row class="information">Pequeno, cor Creme, Dondoca</ion-row>
+      </ion-card>
+      <ion-button id="meet-button-ong" fill="clear">Conhecer</ion-button>
+
+    </ion-list>
+</div>
+<!-- FIM da composição do menu de Perdidos ================================================================================================================== -->
+
+
+
+<!--Refresh ========================================================================================================================================= -->  
+<ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Carregando postagens anteriores...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+
+<p id='teste' aling="center"><img src="{{ photo }}"></p>
+    
+</ion-content>

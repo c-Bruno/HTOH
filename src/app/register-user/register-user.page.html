@@ -1,0 +1,124 @@
+<ion-header>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</ion-header>
+
+<ion-content>
+  <form action="/exemplo.js">
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide id="ion-slide-1" style="background-color: #7DBFCD">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-12 col-xs-12 text-center">
+              <br>
+              <br>
+              <div class="title-white">Preencha as informações a baixo para prepararmos tudo.</div>
+            </div>
+            <div class="col-md-12 col-xs-12">
+              <div class="title-white">Isso facilita muito o processo.</div>
+            </div>
+            <br> <br> <br> <br> <br> <br> <br> <br>
+            <div class="col-md-12 col-xs-12">
+              <!-- NOME -->
+              <div class="form-group">
+                <br>
+                <input class="input-group mb-3 input-group-prepend" type="text" class="form-control" placeholder="Nome"
+                  aria-label="Nome" aria-describedby="basic-addon1">
+              </div>
+              <!-- DATA DE NASCIMENTO -->
+              <div class="form-group">
+                <input class="input-group mb-3 input-group-prepend" type="date" class="form-control"
+                  value="Data de nascimento" placeholder="Data de nascimento" aria-label="Data de nascimento"
+                  aria-describedby="basic-addon1">
+              </div>
+              <!-- CPF -->
+              <div class="form-group">
+                <input class="input-group mb-3 input-group-prepend" type="text" class="form-control" placeholder="CPF"
+                  aria-label="CPF" aria-describedby="basic-addon1">
+              </div>
+              <!-- NÚMERO DE TELEFONE -->
+              <div class="form-group">
+                <input class="input-group mb-3 input-group-prepend" type="number" class="form-control"
+                  placeholder="Telefone" aria-label="Telefone" aria-describedby="basic-addon1">
+              </div>
+              <!-- BOTÃO -->
+              <br>
+              <div>
+                <div class="little-letters">Passe para o lado</div>
+                <div class="little-little-letters">Passo 1 de 3</div>
+                <br> <br> <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+
+      <ion-slide style="background-color: #7DBFCD;">
+        <div class="container">
+            <br>
+            <br>
+          <div class="row justify-content-center">
+            <div class="col-md-12 col-xs-12 title-white">Quase acabando...</div>
+            <br>
+            <br>
+            <div class="col-md-12 col-xs-12 image"><img src="../../assets/imgs/cadastro_user_1-circulo.png"></div>
+            <div class="col-md-12 col-xs-12">
+              <!-- E-MAIL -->
+              <div class="form-group">
+                <br>
+                <input class="input-group mb-3 input-group-prepend" type="text" class="form-control"
+                  placeholder="E-mail" aria-label="E-mail" aria-describedby="basic-addon1">
+              </div>
+              <!-- CONFIRMAR E-MAIL -->
+              <div class="form-group">
+                <input class="input-group mb-3 input-group-prepend" type="text" class="form-control"
+                  placeholder="Confirmar e-mail" aria-label="Confirmar e-mail" aria-describedby="basic-addon1">
+              </div>
+              <!-- SENHA -->
+              <div class="form-group">
+                <input class="input-group mb-3 input-group-prepend" type="password" class="form-control"
+                  placeholder="Senha" aria-label="Senha" aria-describedby="basic-addon1">
+              </div>
+              <!-- CONFIRMAR SENHA -->
+              <div class="form-group">
+                <input class="input-group mb-3 input-group-prepend" type="password" class="form-control"
+                  placeholder="Confirmar senha" aria-label="Confirmar senha" aria-describedby="basic-addon1">
+              </div>
+              <br>
+              <!-- BOTÃO -->
+              <div>
+                <div class="little-letters">Passe para o lado</div>
+                <div class="little-little-letters">Passo 2 de 3</div>
+                <br> <br> <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+      <ion-slide style="background-color: #7DBFCD;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-12 col-xs-12 text-center">
+              <br>
+              <br>
+              <div class="col-sm-12 col-xs-12 title-white">Muito obrigado pelas informações.
+                <br> <br> <br> <br> <br> <br> <br>
+                <img class="image" src="../../assets/imgs/cadastro-sucesso-ong-e-user.png">
+              </div>
+              <br> <br> <br> <br> <br> <br>
+              <div class="little-little-letters">Passo 3 de 3</div>
+              <br>
+              <!-- BOTÃO -->
+              <div class="form-group">
+                <button type="submit" id="botao-verde" class="btn btn-outline-light">Finalizar</button>
+                <br> <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </form>
+</ion-content>

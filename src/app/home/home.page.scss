@@ -42,9 +42,11 @@ ion-content {
 .efeito{
   background-color: #1B2531;
   color: #F1F2F4;
+
   float: left;
   width: 220px;
   padding: 0px;
+
   font-size: 20px;
   border-radius: 30px;
   transition: all 400ms ease;
@@ -60,6 +62,7 @@ ion-content {
   left: 0px;
   width: 0px;
   height: 0px;
+  
   background: rgba(255, 255, 255, 0.3);
   transition: all 1s ease;
 }

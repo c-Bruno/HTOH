@@ -41,6 +41,7 @@ export class LoginPage implements OnInit {
 
     else{
       this.Alert();
+      
       this.passText = "";
       this.isValid = false;
     }

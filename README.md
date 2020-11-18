@@ -14,26 +14,14 @@ Abrangendo toda classe de animais, cachorros e gatos, dentre os mais comuns, den
 de nossos intuitos é possibilitar uma conexão ideal para que pessoas possam adotar estes animais.
 
 
+### Start the project
+The project is started with the regular ionic commands.
 
-## Features
-- 💹 Nodejs
-- Ionic
-- Angular
+1. Run ```npm install``` to install all dependencies.
+2. Run ```ionic serve``` to start the development environment.
+3. To build the project run ```ionic build android``` or ```ionic build ios```. In order for you to build an iOS app, you need to run on MacOS.
 
-## Development Setup
-- Nodejs (https://nodejs.org/en/)
-- ionic (run "npm install -g @ionic/cli" and "npm install -g cordova") 
-- angular 9.1.4 (ng update @angular/cli --force)
-
-## Branching
-Create new branch based on `master`: 
-- Go `master` branch
-- Run `git pull origin master`
-- Run `git checkout -b <branch_name>` (branch name should be equal task id example: name of the developer)
-
-## Development
-#### Code scaffolding
-
+An alternative is to emulate the app on a device or upload it to the ionic cloud. From here you can download the ionic view app and use the app on all devices.
 
 _____________________
 
